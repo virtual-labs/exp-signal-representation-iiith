@@ -2,38 +2,65 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": " Two signals $x_1(t)$ and $x_2(t)$ are orthogonal if  ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "their product is always zero ",
+        "b": "their dot product is zero ",
+        "c": "their sum is always zero ",
+        "d": "their dot product is positive  "
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "explanations": "The dot product of two orthogonal vectors is zero "
       },
       "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "Beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": " The signals $\\sin(t)$ and $\\sin(\\alpha t)$ are orthogonal in the interval $[0,2\\pi]$ if  ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "  $\\alpha$ is any integer  ",
+        "b": "$\\alpha$ is any integer other than $1 $ ",
+        "c": "$\\alpha$ is any integer other than $1$ or $-1$ ",
+        "d": "none of the above "
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "explanations": "Simplify the expression x(t) and use the formula"
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "Which of the signals are orthogonal to each other, $x_1(t) = \\psi(t), x_2(t) = cos(2\\pi t), x_3(t)= \\psi(2t)$ in the period [0, 1],  ",
+      "answers": {
+        "a": " $ x_1(t)$ and $x_2(t) $",
+        "b": "$ x_1(t)$ and $x_3(t) $",
+        "c": "$ x_3(t)$ and $x_2(t) $",
+        "d": "(a) and (b)  "
+      },
+      "correctAnswer": "b",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "Which pairs of signals are orthogonal among $x_1(t) = \\cos(t), x_2(t) = 5\\sin(5t), x_3(t) = \\sin(t)$ in the period $[0, 2\\pi]$, ",
+      "answers": {
+        "a": " $ x_1(t)$ and $x_2(t) $",
+        "b": "$ x_1(t)$ and $x_3(t) $",
+        "c": "$ x_3(t)$ and $x_2(t) $",
+        "d": "all the above "
+      },
+      "correctAnswer": "d",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "If vectors $v_1$ and $v_2$ are orthogonal and vectors $v_2$ and $v_3$ are orthogonal, then which of the following statement is true",
+      "answers": {
+        "a": " $v_1$ and $v_3$ are always orthogonal ",
+        "b": "$v_1$ and $v_3$ may not be orthogonal ",
+        "c": "$v_2$ may not be orthogonal to $(v_1+v_3)$ ",
+        "d": "$v_1$ is always orthogonal to $(v_2+v_3)$"
+      },
+      "correctAnswer": "b",
+      "difficulty": "Advanced"
     }
   ]
 }
