@@ -2,38 +2,65 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Let $v_1 = [1 0 0]^T, v_2 = [1 2 0]^T ~\\text{and}~ v_3 = [0 3 2]^T$. Which pairs of vectors are orthogonal to each other? ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "$v_1$ and $v_2$",
+        "b": "$v_2$ and $v_3$",
+        "c": "$v_1$ and $v_3$",
+        "d": "all above "
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "explanations": "The dot product of two orthogonal vectors is zero "
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "What is $a_0$ for the periodic signal $x(t) = \\frac{\\sqrt(1-\\sin(x))}{2}$?  ",
+      "answers": {
+        "a": " 1/2  ",
+        "b": "$\\pi$ ",
+        "c": "0",
+        "d": "3/2 $\\pi$ "
+      },
+      "explanations": {
+        "explanations": "Simplify the expression x(t) and use the formula"
+      },
+      "correctAnswer": "c",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "What is $exp(j\\theta)$ equal to, where $j$ is the square root of unity?  ",
+      "answers": {
+        "a": " $\\sin(\\theta) + \\cos(\\theta)$",
+        "b": "$\\cos(\\theta) + j\\sin(\\theta)$ ",
+        "c": "$\\sin(\\theta) + j\\cos(\\theta)$",
+        "d": "$j\\cos(\\theta) + j\\sin(\\theta)$ "
+      },
+      "correctAnswer": "b",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": " If the signals $x_1(t)$ and $x_2(t)$ are orthogonal in $[0 T]$, then the signals ",
+      "answers": {
+        "a": " $-x_1(t)$ and $-x_2(t)$ are orthogonal in $[0 T]$",
+        "b": " $x_1(-t)$ and $x_2(-t)$ are orthogonal in $[-T 0]$  ",
+        "c": "$y(t) = x_1(t)x_2(t)$ and $z(t) = 1$ are orthogonal in $[0 T]$ ",
+        "d": "all the above "
+      },
+      "correctAnswer": "d",
+      "difficulty": "Advanced"
+    },
+    {
+      "question": "If vectors $v_1$ and $v_2$ are orthogonal and vectors $v_2$ and $v_3$ are orthogonal, then which of the following statement is true",
+      "answers": {
+        "a": " $v_1$ and $v_3$ are always orthogonal ",
+        "b": "$v_1$ and $v_3$ may not be orthogonal ",
+        "c": "$v_2$ may not be orthogonal to $(v_1+v_3)$ ",
+        "d": "$v_1$ is always orthogonal to $(v_2+v_3)$"
+      },
+      "correctAnswer": "b",
+      "difficulty": "Advanced"
     }
   ]
 }
