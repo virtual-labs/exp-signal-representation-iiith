@@ -196,8 +196,8 @@ function sig(){
       
     Plotly.newPlot('figure1', data, layout, config);
       var update = {
-        width: 500,
-        height: 400
+        width: 400,
+        height: 300
     };
     Plotly.relayout('figure1', update);
 }
@@ -521,8 +521,8 @@ function prod(){
       
     Plotly.newPlot('figure2', data, layout, config);
       var update = {
-        width: 500,
-        height: 400
+        width: 400,
+        height: 300
     };
     Plotly.relayout('figure2', update);
 }
@@ -655,8 +655,8 @@ function sine(){
       
     Plotly.newPlot('figure0', data, layout, config);
       var update = {
-        width: 500,
-        height: 400
+        width: 400,
+        height: 300
     };
     Plotly.relayout('figure0', update);
     var element = document.getElementById("in1");
@@ -818,8 +818,8 @@ function four(){
       
     Plotly.newPlot('figure3', data, layout, config);
       var update = {
-        width: 500,
-        height: 400
+        width: 400,
+        height: 300
     };
     Plotly.relayout('figure3', update);
 
@@ -974,8 +974,8 @@ function har(){
       
     Plotly.newPlot('figure4', data, layout, config);
       var update = {
-        width: 500,
-        height: 400
+        width: 400,
+        height: 300
     };
     Plotly.relayout('figure4', update);
 }
@@ -1206,8 +1206,8 @@ function orth(){
       
     Plotly.newPlot('figure5', data, layout, config);
       var update = {
-        width: 500,
-        height: 400
+        width: 400,
+        height: 300
     };
     Plotly.relayout('figure5', update);
 }

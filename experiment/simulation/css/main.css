@@ -175,7 +175,7 @@ border-radius: 6px;
 }
 
 /* ----------------------------------------- Tabs --------------------------------------- */
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 650px) and (max-width: 1024px) {
 
 .max-width{
     max-width: 1024px;
@@ -318,7 +318,7 @@ section .title{
 
 /* --------------------------------------------- Mobiles -------------------------------------- */
 
-@media (max-width: 480px) {
+@media (max-width: 650px) {
   .max-width{
     max-width: 480px;
     padding: 0 20px;
@@ -343,7 +343,7 @@ section .title{
   position: relative;
   text-align: center;
   color: #000000;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 500;
   margin-top: 20%;
   font-family: 'Ubuntu', sans-serif;
@@ -360,9 +360,9 @@ section .title{
   margin-top: 10%;
 }
 .signals .signals-content .left{
-  width: 50%;
+  width: 100%;
   position: relative;
-  margin-left: 35%;
+  margin-left: 25%;
 }
 .signals .signals-content .left .input[type=text] {
   padding: 12px 20px;
@@ -372,8 +372,8 @@ section .title{
 .signals .signals-content .right{
   width: 100%;
   position: relative;
-  margin-top: 20%;
-  margin-left: 15%;
+  margin-top: 0%;
+  margin-left: -15%;
 }
 
 .product{
@@ -387,9 +387,9 @@ section .title{
   margin-top: 10%;
 }
 .product .product-content .left{
-  width: 50%;
+  width: 100%;
   position: relative;
-  margin-left: 35%;
+  margin-left: 25%;
 }
 .product .product-content .left .input[type=text] {
   padding: 12px 20px;
@@ -399,8 +399,8 @@ section .title{
 .product .product-content .right{
   width: 100%;
   position: relative;
-  margin-top: 20%;
-  margin-left: 15%;
+  margin-top: 10%;
+  margin-left: -15%;
 }
 
 .fourier{
@@ -414,9 +414,9 @@ section .title{
   margin-top: 10%;
 }
 .fourier .fourier-content .left{
-  width: 50%;
+  width: 100%;
   position: relative;
-  margin-left: 35%;
+  margin-left: 25%;
 }
 .fourier .fourier-content .left .input[type=text] {
   padding: 12px 20px;
@@ -427,7 +427,7 @@ section .title{
   width: 100%;
   position: relative;
   margin-top: 10%;
-  margin-left: 15%;
+  margin-left: -25%;
 }
 
 .haar{
@@ -441,9 +441,9 @@ section .title{
   margin-top: 10%;
 }
 .haar .haar-content .left{
-  width: 50%;
+  width: 100%;
   position: relative;
-  margin-left: 35%;
+  margin-left: 25%;
 }
 .haar .haar-content .left .input[type=text] {
   padding: 12px 20px;
@@ -454,7 +454,7 @@ section .title{
   width: 100%;
   position: relative;
   margin-top: 10%;
-  margin-left: 15%;
+  margin-left: -25%;
 }
 }
 
