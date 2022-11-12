@@ -26,8 +26,9 @@ $$ \langle\textbf{x}_1(t),\textbf{x}_2(t)\rangle~ = \int_{t=0}^{t=T} \textbf{x}_
 
 As an example, consider the signals $\textbf{x}_1(t) = \sin(2\pi t)$ and $\textbf{x}_2(t) = \cos (4\pi t)$. We can easily verify that their dot product is zero as seen by the product signal below 
 
+<p align="center"><img src="./images/p1_sig_prod.png" alt="drawing" width="400"/>
 
-<p align="center"><img src="./images/p1_sig_prod.png" alt="drawing" width="230"/> &nbsp&nbsp&nbsp&nbsp <img src="./images/p2_sig_prod.png" alt="drawing" width="230"/>
+<p align="center"><img src="./images/p2_sig_prod.png" alt="drawing" width="400"/>
 
 The notion of dot product and orthogonality can be extended to complex signals. If $\textbf{x}_1(t)$ and $\textbf{x}_2(t)$ are periodic complex-valued signals, their dot product is defined as 
 
@@ -67,20 +68,20 @@ $$ \psi(t) = \left\{\begin{matrix}
 
 $$\psi _{n,k}(t)=2^{n/2}\psi (2^{n}t-k),\quad t\in \mathbb {R}.$$
 
-<p align="center"><img src="./images/p3_haar_1.png" alt="drawing" width="250"/>
+<p align="center"><img src="./images/p3_haar_1.png" alt="drawing" width="400"/>
 
 We can verify that the scaled and shift versions of the Haar wavelet are orthogonal to each other. As a special case, orthogonality of the scaled wavelets $\phi_1(t)$ and $\phi_2(t)$ can be seen below, 
 
-<p align="center"><img src="./images/p3_haar_2.png" alt="drawing" width="250"/>
+<p align="center"><img src="./images/p3_haar_2.png" alt="drawing" width="400"/>
 
 
 ## Advantages of orthogonality ##
  Finding the coefficients becomes easy when a signal is decomposed into a set of orthogonal signals. Consider the trigonometric Fourier series representation given above. We can find the coefficients $\{a_0, a_k, b_k\}$ by computing the dot product of the given periodic signal $\textbf{x}(t)$ with the signal associated with each of these components. Thus 
 
-$$ A_0 ~= \frac{1}{\pi} \int_{-\pi}^{\pi} \textbf{x}(t)~ dt $$
+$$ a_0 ~= \frac{1}{\pi} \int_{-\pi}^{\pi} \textbf{x}(t)~ dt $$
 
-$$ A_k ~= \frac{1}{\pi} \int_{-\pi}^{\pi} \textbf{x}(t) \cos(kt)~ dt $$
+$$ a_k ~= \frac{1}{\pi} \int_{-\pi}^{\pi} \textbf{x}(t) \cos(kt)~ dt $$
 
-$$ B_k ~= \frac{1}{\pi} \int_{-\pi}^{\pi} \textbf{x}(t) \sin(kt)~ dt $$
+$$ b_k ~= \frac{1}{\pi} \int_{-\pi}^{\pi} \textbf{x}(t) \sin(kt)~ dt $$
 
 Coefficients in other signal representations can be obtained in a similar way.  
