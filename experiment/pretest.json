@@ -10,7 +10,7 @@
         "d": "all above "
       },
       "explanations": {
-        "explanations": "The dot product of two orthogonal vectors is zero "
+        "explanations": "The dot product of two orthogonal vectors is zero. Compute the pairwise dot products of $v_1$, $v_2$, and $v_3$."
       },
       "correctAnswer": "c",
       "difficulty": "Beginner"
@@ -24,7 +24,7 @@
         "d": "3/2 $\\pi$ "
       },
       "explanations": {
-        "explanations": "Simplify the expression x(t) and use the formula"
+        "explanations": "Simplify the $x(t)$ as $\\sin(\\pi/4-x/2)$, use trigonometric formula $\\sin(A-B)$ and compute $a_0$ using simplified expression. "
       },
       "correctAnswer": "c",
       "difficulty": "Beginner"
@@ -37,6 +37,9 @@
         "c": "$\\sin(\\theta) + j\\cos(\\theta)$",
         "d": "$j\\cos(\\theta) + j\\sin(\\theta)$ "
       },
+      "explanations": {
+        "explanations": "See Euler's formula"
+      },
       "correctAnswer": "b",
       "difficulty": "Beginner"
     },
@@ -48,8 +51,11 @@
         "c": "$y(t) = x_1(t)x_2(t)$ and $z(t) = 1$ are orthogonal in $[0 T]$ ",
         "d": "all the above "
       },
+      "explanations": {
+        "explanations": "The dot product of two orthogonal vectors is zero."
+      },
       "correctAnswer": "d",
-      "difficulty": "Advanced"
+      "difficulty": "Intermediate"
     },
     {
       "question": "If vectors $v_1$ and $v_2$ are orthogonal and vectors $v_2$ and $v_3$ are orthogonal, then which of the following statement is true",
@@ -59,8 +65,11 @@
         "c": "$v_2$ may not be orthogonal to $(v_1+v_3)$ ",
         "d": "$v_1$ is always orthogonal to $(v_2+v_3)$"
       },
+      "explanations": {
+        "explanations": "Consider three vectors v1, v2 and v3 and compute the dot product of given pairs."
+      },
       "correctAnswer": "b",
-      "difficulty": "Advanced"
+      "difficulty": "Intermediate"
     }
   ]
 }

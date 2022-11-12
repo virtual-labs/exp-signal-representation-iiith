@@ -10,7 +10,7 @@
         "d": "their dot product is positive  "
       },
       "explanations": {
-        "explanations": "The dot product of two orthogonal vectors is zero "
+        "explanations": "The dot product of two orthogonal vectors is zero by definition."
       },
       "correctAnswer": "a",
       "difficulty": "Beginner"
@@ -24,7 +24,7 @@
         "d": "none of the above "
       },
       "explanations": {
-        "explanations": "Simplify the expression x(t) and use the formula"
+        "explanations": "Use the integration formula for different values of $\\alpha$ and check if the solution is zero."
       },
       "correctAnswer": "c",
       "difficulty": "Intermediate"
@@ -37,6 +37,9 @@
         "c": "$ x_3(t)$ and $x_2(t) $",
         "d": "(a) and (b)  "
       },
+      "explanations": {
+        "explanations": "Use the integration formula using given time interval and check if the solution is zero"
+      },
       "correctAnswer": "b",
       "difficulty": "Intermediate"
     },
@@ -48,8 +51,11 @@
         "c": "$ x_3(t)$ and $x_2(t) $",
         "d": "all the above "
       },
+      "explanations": {
+        "explanations": "Use the integration formula in given time interval and check if the solution is zero. "
+      },
       "correctAnswer": "d",
-      "difficulty": "Intermediate"
+      "difficulty": "Beginner"
     },
     {
       "question": "If vectors $v_1$ and $v_2$ are orthogonal and vectors $v_2$ and $v_3$ are orthogonal, then which of the following statement is true",
@@ -58,6 +64,9 @@
         "b": "$v_1$ and $v_3$ may not be orthogonal ",
         "c": "$v_2$ may not be orthogonal to $(v_1+v_3)$ ",
         "d": "$v_1$ is always orthogonal to $(v_2+v_3)$"
+      },
+      "explanations": {
+        "explanations": "The dot product of two orthogonal vectors is zero by definition."
       },
       "correctAnswer": "b",
       "difficulty": "Advanced"
