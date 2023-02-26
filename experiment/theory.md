@@ -28,7 +28,7 @@ As an example, consider the signals $\textbf{x}_1(t) = \sin(2\pi t)$ and $\textb
 
 <p align="center"><img src="./images/p1_sig_prod.png" alt="drawing" width="400"/<em> <p align="center"> product of signals</em>
 
-<p align="center"><img src="./images/p2_sig_prod.png" alt="drawing" width="400"/>
+<p align="center"><img src="./images/p2_sig_prod.png" alt="drawing" width="400"/<em> <p align="center"> product of signals</em>
 
 The notion of dot product and orthogonality can be extended to complex signals. If $\textbf{x}_1(t)$ and $\textbf{x}_2(t)$ are periodic complex-valued signals, their dot product is defined as 
 
