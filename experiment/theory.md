@@ -26,7 +26,7 @@ $$ \langle\textbf{x}_1(t),\textbf{x}_2(t)\rangle~ = \int_{t=0}^{t=T} \textbf{x}_
 
 As an example, consider the signals $\textbf{x}_1(t) = \sin(2\pi t)$ and $\textbf{x}_2(t) = \cos (4\pi t)$. We can easily verify that their dot product is zero as seen by the product signal below 
 
-<p align="center"><img src="./images/p1_sig_prod.png" alt="drawing" width="400"/>
+<p align="center"><img src="./images/p1_sig_prod.png" alt="drawing" width="400"/<em>image_caption</em>>
 
 <p align="center"><img src="./images/p2_sig_prod.png" alt="drawing" width="400"/>
 
