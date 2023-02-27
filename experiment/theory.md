@@ -9,7 +9,7 @@ In the Cartesian coordinate system, the unit vectors $\textbf{i}, \textbf{j},$ a
 
 $$\langle\textbf{v}_1,\textbf{v}_2\rangle = \textbf{v}_1 \cdot \textbf{v}_2 = a_1a_2 + b_1b_2 + c_1c_2 $$
 
-By this definition, we can see that any two vectors from the set {$\textbf{i, j, k}$} have zero dot product. In general, any two perpendicular vectors will have zero dot product and are said to be orthogonal to each other. Additionally, when orthogonal unit vectors are used as basis to represent vectors, the coefficients can be easily found. For example, when {$\textbf{i, j, k}$} are used as basis,  
+By this definition, we can see that any two vectors from the set $[\textbf{i}, \textbf{j}, \textbf{k}]$  have zero dot product. In general, any two perpendicular vectors will have zero dot product and are said to be orthogonal to each other. Additionally, when orthogonal unit vectors are used as basis to represent vectors, the coefficients can be easily found. For example, when $[\textbf{i}, \textbf{j}, \textbf{k}]$  are used as basis,  
 
 $$ a = \textbf{v} \cdot \textbf{i},  \quad b = \textbf{v} \cdot \textbf{j}, \quad c = \textbf{v} \cdot \textbf{k} $$
  
