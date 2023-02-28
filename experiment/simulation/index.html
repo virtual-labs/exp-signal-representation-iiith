@@ -35,6 +35,59 @@
     <section class="signals" id="signals">
         <div class="max-width">
             <h2 class="title">Plotting Signals</h2>
+			<div class="columns is-centered">
+				<div class="v-collapsible-instruction-container v-instruction-container">
+					<div class="v-collapsible is-size-5">Instructions</div>
+					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
+						This section requires selection of signal and tweaking of some parameters of the signal to visualize how the signal changes with the change in parameters. The objective of this section is to visualize the signal and identify the parameters of a signal. Click on the "<b>Plot</b>" button to visualize the plots. Steps to be done are as follows
+							<ol>
+								<li> Select the signal in the drop down provided </li>
+								<li> Enter Parameters as necessary </li>
+								<li> Click on Plot button to visualize the plot in the figure </li>
+							</ol>
+							<br>
+							The parameters mentioned as "Parameter 1" and "Parameter 2" for the systems correspond to the parameters as listed below
+							
+							<table style="width:100%">
+								<tr>
+									<th>Signal</th>
+									<th>Parameter 1</th>
+									<th>Parameter 2</th>
+								</tr>
+								<tr>
+									<td>Sine</td>
+									<td>Frequency</td>
+									<td>Amplitude</td>
+								</tr>
+								<tr>
+									<td>Cosine</td>
+									<td>Frequency</td>
+									<td>Amplitude</td>
+								</tr>
+								<tr>
+									<td>Ramp</td>
+									<td>-</td>
+									<td>Amplitude</td>
+								</tr>
+								<tr>
+									<td>Pulse</td>
+									<td>-</td>
+									<td>Amplitude</td>
+								</tr>
+								<tr>
+									<td>Haar</td>
+									<td>Scale Parameter</td>
+									<td>Amplitude</td>
+								</tr>
+								<tr>
+									<td>Complex Exponential</td>
+									<td>Frequency</td>
+									<td>Amplitude</td>
+								</tr>
+							</table>
+					</div>
+				</div>
+			</div>
             <div class="signals-content">
                 <div class="column left">
                     <div class="box">
@@ -63,6 +116,61 @@
     <section class="product" id="product">
         <div class="max-width">
             <h2 class="title">Product of Signals</h2>
+			<div class="columns is-centered">
+				<div class="v-collapsible-instruction-container v-instruction-container">
+					<div class="v-collapsible is-size-5">Instructions</div>
+					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
+						This section requires selection of two signals and tweaking of some parameters of the signals to visualize how the signals change with the change in parameters. The objective of this section is to visualize the product of two signals. Click on the "<b>Plot</b>" button to visualize the plots. Steps to be done are as follows
+							<ol>
+								<li> Select the first signal in the drop down provided </li>
+								<li> Enter Parameters as necessary </li>
+								<li> Select the second signal in the drop down provided </li>
+								<li> Enter Parameters as necessary </li>
+								<li> Click on Plot button to visualize the plot in the figure </li>
+							</ol>
+							<br>
+							The parameters mentioned as "Parameter 1" and "Parameter 2" for the systems correspond to the parameters as listed below
+							
+							<table style="width:100%">
+								<tr>
+									<th>Signal</th>
+									<th>Parameter 1</th>
+									<th>Parameter 2</th>
+								</tr>
+								<tr>
+									<td>Sine</td>
+									<td>Frequency</td>
+									<td>Amplitude</td>
+								</tr>
+								<tr>
+									<td>Cosine</td>
+									<td>Frequency</td>
+									<td>Amplitude</td>
+								</tr>
+								<tr>
+									<td>Ramp</td>
+									<td>-</td>
+									<td>Amplitude</td>
+								</tr>
+								<tr>
+									<td>Pulse</td>
+									<td>-</td>
+									<td>Amplitude</td>
+								</tr>
+								<tr>
+									<td>Haar</td>
+									<td>Scale Parameter</td>
+									<td>Amplitude</td>
+								</tr>
+								<tr>
+									<td>Complex Exponential</td>
+									<td>Frequency</td>
+									<td>Amplitude</td>
+								</tr>
+							</table>
+					</div>
+				</div>
+			</div>
             <div class="product-content">
                 <div class="column left">
 					<h4>Select Signal 1</h4>
@@ -105,6 +213,26 @@
     <section class="haar" id="sine">
         <div class="max-width">
             <h2 class="title">Orthogonality of Real Sinusoids</h2>
+			<div class="columns is-centered">
+				<div class="v-collapsible-instruction-container v-instruction-container">
+					<div class="v-collapsible is-size-5">Instructions</div>
+					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
+						This section requires selection of two real sinusoidal signals (sine or cosine) and tweaking of a scale parameter of the signals to visualize how their product and orthogonality changes with the change in parameters. The objective of this section is to visualize the product of two real sinusoids and comment on their orthogonality. Click on the "<b>Plot</b>" button to visualize the plots. Steps to be done are as follows 
+						<ol>
+							<li> Select the first signal in the drop down provided </li>
+							<li> Enter Parameter k </li>
+							<li> Select the second signal in the drop down provided </li>
+							<li> Enter Parameter k </li>
+							<li> Click on Plot button to visualize the plot in the figure </li>
+						</ol>
+						The plot is obtained and it represents the product of the two selected signals with the specified parameters. The areas are shaded using different colors. The areas above the x-axis (positive integrals) are shaded with one color (here, orange) and the areas below the x-axis (negative integrals) are shaded with another color (here, blue). 
+						<br>
+						This coloring helps visualize the areas (integrals) that cancel each other out during a complete integration, which may result in a 0 integral or not, which determines the orthogonality between the signals.
+						<br>
+						The observations tab at the bottom shows the integral of the prooduct of the signals. The value present in this observation tab shows the value for the integral. Recalling from theory, this value is <b>0</b> for orthogonal signals and non-zero for signals which are not orthogonal to each other.
+					</div>
+				</div>
+			</div>
             <div class="haar-content">
                 <div class="column left">
 					<h4>Select Signal 1</h4>
@@ -144,6 +272,24 @@
     <section class="fourier" id="fourier">
         <div class="max-width">
             <h2 class="title">Orthogonality of Complex Sinusoids</h2>
+			<div class="columns is-centered">
+				<div class="v-collapsible-instruction-container v-instruction-container">
+					<div class="v-collapsible is-size-5">Instructions</div>
+					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
+						This section comprises of two complex sinusoidal signals (complex exponential) and tweaking of a scale parameter of the signals to visualize how their product and orthogonality changes with the change in parameters. The objective of this section is to visualize the product of two complex sinusoids and comment on their orthogonality. Click on the "<b>Plot</b>" button to visualize the plots. Steps to be done are as follows
+						<ol>
+							<li> Enter Parameter k for the first signal </li>
+							<li> Enter Parameter k for the second signal </li>
+							<li> Click on Plot button to visualize the plot in the figure </li>
+						</ol>
+						The plot is obtained and it represents the product of two complex exponentials with the specified parameters. The figure is divided into 2 subplots. The first one represents the real part of the signal and the second part represents the imaginery part of the signal. The areas are shaded using different colors. The areas above the x-axis (positive integrals) are shaded with one color and the areas below the x-axis (negative integrals) are shaded with another color. 
+						<br>
+						This coloring helps visualize the areas (integrals) that cancel each other out during a complete integration, which may result in a 0 integral or not, which determines the orthogonality between the signals.
+						<br>
+						The observations tab at the bottom shows the integral of the prooduct of the signals. The value present in this observation tab shows the value for the integral. Recalling from theory, this value is <b>0</b> for orthogonal signals and non-zero for signals which are not orthogonal to each other.
+					</div>
+				</div>
+			</div>
             <div class="fourier-content">
                 <div class="column left">
 					<h4>Select k for Signal 1</h4>
@@ -171,6 +317,24 @@
     <section class="haar" id="haar">
         <div class="max-width">
             <h2 class="title">Orthogonality of Haar Wavelets</h2>
+			<div class="columns is-centered">
+				<div class="v-collapsible-instruction-container v-instruction-container">
+					<div class="v-collapsible is-size-5">Instructions</div>
+					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
+						This section comprises of two Haar wavelets and tweaking of a scale parameter of the wavelets to visualize how their product and orthogonality changes with the change in parameters. The objective of this section is to visualize the product of two Haar wavelets and comment on their orthogonality. Click on the "<b>Plot</b>" button to visualize the plots. Steps to be done are as follows
+						<ol>
+							<li> Select the Parameter k for the first signal from the drop down </li>
+							<li> Select the Parameter k for the second signal from the drop down </li>
+							<li> Click on Plot button to visualize the plot in the figure </li>
+						</ol>
+						The plot is obtained and it represents the product of two Haar wavelets with the specified parameters. The areas are shaded using different colors. The areas above the x-axis (positive integrals) are shaded with one color (here, orange) and the areas below the x-axis (negative integrals) are shaded with another color (here, blue). 
+						<br>
+						This coloring helps visualize the areas (integrals) that cancel each other out during a complete integration, which may result in a 0 integral or not, which determines the orthogonality between the signals.
+						<br>
+						The observations tab at the bottom shows the integral of the prooduct of the signals. The value present in this observation tab shows the value for the integral. Recalling from theory, this value is <b>0</b> for orthogonal signals and non-zero for signals which are not orthogonal to each other.
+					</div>
+				</div>
+			</div>
             <div class="haar-content">
                 <div class="column left">
 					<h4 style="margin-left: -20%; margin-bottom: 15%;">Select Shift Parameter of Wavelet 1</h4>
@@ -212,6 +376,26 @@
     <section class="fourier" id="ortho">
         <div class="max-width">
             <h2 class="title">Test Orthogonality of Signals</h2>
+			<div class="columns is-centered">
+				<div class="v-collapsible-instruction-container v-instruction-container">
+					<div class="v-collapsible is-size-5">Instructions</div>
+					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
+						This section comprises of two signals to be selected and tweaking of a scale parameter of the wavelets to visualize how their product and orthogonality changes with the change in parameters. The objective of this section is to visualize the product of any two selected signals and comment on their orthogonality. Click on the "<b>Plot</b>" button to visualize the plots. Steps to be done are as follows
+						<ol>
+							<li> Select the first signal in the drop down provided </li>
+							<li> Enter Parameters as necessary </li>
+							<li> Select the second signal in the drop down provided </li>
+							<li> Enter Parameters as necessary </li>
+							<li> Click on Plot button to visualize the plot in the figure </li>
+						</ol>
+						The plot is obtained and it represents the product of the two selected signals with the specified parameters. The areas are shaded using different colors. The areas above the x-axis (positive integrals) are shaded with one color and the areas below the x-axis (negative integrals) are shaded with another color. 
+						<br>
+						This coloring helps visualize the areas (integrals) that cancel each other out during a complete integration, which may result in a 0 integral or not, which determines the orthogonality between the signals.
+						<br>
+						The observations tab at the bottom shows the integral of the prooduct of the signals. The value present in this observation tab shows the value for the integral. Recalling from theory, this value is <b>0</b> for orthogonal signals and non-zero for signals which are not orthogonal to each other.
+					</div>
+				</div>
+			</div>
             <div class="fourier-content">
                 <div class="column left">
 					<h4>Select Signal 1</h4>
@@ -256,6 +440,7 @@
 </div>
 
   <script src="./js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
 
 </body>
 
