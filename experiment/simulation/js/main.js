@@ -165,7 +165,7 @@ function sig(){
           
         Plotly.newPlot('figure1', data, layout, config);
           var update = {
-            width: 500,
+            width: 600,
             height: 400
         };
         Plotly.relayout('figure1', update);

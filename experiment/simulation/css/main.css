@@ -53,7 +53,7 @@ section .title{
   color: #000000;
   font-size: 40px;
   font-weight: 500;
-  margin-top: -20%;
+  margin-top: 0%;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -674,4 +674,12 @@ section .title{
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+/* ------------------------------------------ Table ------------------------------------ */
+
+table,th,td {
+  padding: 10%;
+  border: 3px solid black;
+  border-collapse: collapse;
 }
