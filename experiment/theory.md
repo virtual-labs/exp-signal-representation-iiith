@@ -68,11 +68,11 @@ $$ \psi(t) = \left\{\begin{matrix}
 
 $$\psi _{n,k}(t)=2^{n/2}\psi (2^{n}t-k),\quad t\in \mathbb {R}.$$
 
-<p align="center"><img src="./images/p3_haar_1.png" alt="drawing" width="400"/<em> <p align="center"> Fig.3: Orthogonality of scaled Haar wavelet</em>
+<p align="center"><img src="./images/p3_haar_1.png" alt="drawing" width="400"/<em> <p align="center"> Fig.3: Haar wavelet</em>
 
 We can verify that the scaled and shift versions of the Haar wavelet are orthogonal to each other. As a special case, orthogonality of the scaled wavelets $\phi_1(t)$ and $\phi_2(t)$ can be seen below, 
 
-<p align="center"><img src="./images/p3_haar_2.png" alt="drawing" width="400"/<em> <p align="center"> Fig.4: Haar wavelet</em>
+<p align="center"><img src="./images/p3_haar_2.png" alt="drawing" width="400"/<em> <p align="center"> Fig.4: Orthogonality of scaled Haar wavelet</em>
 
 
 ## Advantages of orthogonality ##
