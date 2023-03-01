@@ -26,9 +26,9 @@ $$ \langle\textbf{x}_1(t),\textbf{x}_2(t)\rangle~ = \int_{t=0}^{t=T} \textbf{x}_
 
 As an example, consider the signals $\textbf{x}_1(t) = \sin(2\pi t)$ and $\textbf{x}_2(t) = \cos (4\pi t)$. We can easily verify that their dot product is zero as seen by the product signal below 
 
-<p align="center"><img src="./images/p1_sig_prod.png" alt="drawing" width="400"/<em> <p align="center"> Fig.1: product of signals</em>
+<p align="center"><img src="./images/p1_sig_prod.png" alt="drawing" width="400"/<em> <p align="center"> Fig.1: product of sine and cosine signals</em>
 
-<p align="center"><img src="./images/p2_sig_prod.png" alt="drawing" width="400"/<em> <p align="center"> Fig.2: product of signals</em>
+<p align="center"><img src="./images/p2_sig_prod.png" alt="drawing" width="400"/<em> <p align="center"> Fig.2: Area getting cancelled due to product of signals</em>
 
 The notion of dot product and orthogonality can be extended to complex signals. If $\textbf{x}_1(t)$ and $\textbf{x}_2(t)$ are periodic complex-valued signals, their dot product is defined as 
 
@@ -68,7 +68,7 @@ $$ \psi(t) = \left\{\begin{matrix}
 
 $$\psi _{n,k}(t)=2^{n/2}\psi (2^{n}t-k),\quad t\in \mathbb {R}.$$
 
-<p align="center"><img src="./images/p3_haar_1.png" alt="drawing" width="400"/<em> <p align="center"> Fig.3: Haar wavelet</em>
+<p align="center"><img src="./images/p3_haar_1.png" alt="drawing" width="400"/<em> <p align="center"> Fig.3: Orthogonality of scaled Haar wavelet</em>
 
 We can verify that the scaled and shift versions of the Haar wavelet are orthogonal to each other. As a special case, orthogonality of the scaled wavelets $\phi_1(t)$ and $\phi_2(t)$ can be seen below, 
 
