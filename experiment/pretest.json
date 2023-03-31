@@ -1,0 +1,75 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "<img src=./images/pretest/Q1/Q1.svg></img>",
+      "answers": {
+        "a": "<img src=./images/pretest/Q1/q1_op1.svg></img>",
+        "b": "<img src=./images/pretest/Q1/q1_op2.svg></img>",
+        "c": "<img src=./images/pretest/Q1/q1_op3.svg></img>",
+        "d": "<img src=./images/pretest/Q1/q1_op4.svg></img>"
+      },
+      "explanations": {
+        "c": "<img src=./images/pretest/Q1/exp.svg></img>"
+      },
+      "correctAnswer": "c",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "<img src=./images/pretest/Q2/Q2.svg></img>",
+      "answers": {
+        "a": "<img src=./images/pretest/Q2/q2_op1.svg></img>",
+        "b": "<img src=./images/pretest/Q2/q2_op2.svg></img>",
+        "c": "<img src=./images/pretest/Q2/q2_op3.svg></img>",
+        "d": "<img src=./images/pretest/Q2/q2_op4.svg></img>"
+      },
+      "explanations": {
+        "c": "<img src=./images/pretest/Q2/exp.svg></img>"
+      },
+      "correctAnswer": "c",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "<img src=./images/pretest/Q3/Q3.svg></img>",
+      "answers": {
+        "a": "<img src=./images/pretest/Q3/q3_op1.svg></img>",
+        "b": "<img src=./images/pretest/Q3/q3_op2.svg></img>",
+        "c": "<img src=./images/pretest/Q3/q3_op3.svg></img>",
+        "d": "<img src=./images/pretest/Q3/q3_op4.svg></img>"
+      },
+      "explanations": {
+        "b": "<img src=./images/pretest/Q3/exp.svg></img>"
+      },
+      "correctAnswer": "b",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "<img src=./images/pretest/Q4/Q4.svg></img>",
+      "answers": {
+        "a": "<img src=./images/pretest/Q4/q4_op1.svg></img>",
+        "b": "<img src=./images/pretest/Q4/q4_op2.svg></img>",
+        "c": "<img src=./images/pretest/Q4/q4_op3.svg></img>",
+        "d": "<img src=./images/pretest/Q4/q4_op4.svg></img>"
+      },
+      "explanations": {
+        "d": "<img src=./images/pretest/Q4/exp.svg></img>"
+      },
+      "correctAnswer": "d",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "<img src=./images/pretest/Q5/Q5.svg></img>",
+      "answers": {
+        "a": "<img src=./images/pretest/Q5/q5_op1.svg></img>",
+        "b": "<img src=./images/pretest/Q5/q5_op2.svg></img>",
+        "c": "<img src=./images/pretest/Q5/q5_op3.svg></img>",
+        "d": "<img src=./images/pretest/Q5/q5_op4.svg></img>"
+      },
+      "explanations": {
+        "b": "<img src=./images/pretest/Q5/exp.svg></img>"
+      },
+      "correctAnswer": "b",
+      "difficulty": "Intermediate"
+    }
+  ]
+}
