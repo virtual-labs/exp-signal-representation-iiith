@@ -10,7 +10,7 @@
         "d": "<img src=./images/pretest/Q1/q1_op4.svg></img>"
       },
       "explanations": {
-        "c": "<img src=./images/pretest/Q1/exp.svg></img>"
+        "c": "<img src=./images/pretest/Q1/exp.png></img>"
       },
       "correctAnswer": "c",
       "difficulty": "Beginner"
@@ -24,7 +24,7 @@
         "d": "<img src=./images/pretest/Q2/q2_op4.svg></img>"
       },
       "explanations": {
-        "c": "<img src=./images/pretest/Q2/exp.svg></img>"
+        "c": "<img src=./images/pretest/Q2/exp.png></img>"
       },
       "correctAnswer": "c",
       "difficulty": "Beginner"
@@ -38,7 +38,7 @@
         "d": "<img src=./images/pretest/Q3/q3_op4.svg></img>"
       },
       "explanations": {
-        "b": "<img src=./images/pretest/Q3/exp.svg></img>"
+        "b": "<img src=./images/pretest/Q3/exp.png></img>"
       },
       "correctAnswer": "b",
       "difficulty": "Beginner"
@@ -52,7 +52,7 @@
         "d": "<img src=./images/pretest/Q4/q4_op4.svg></img>"
       },
       "explanations": {
-        "d": "<img src=./images/pretest/Q4/exp.svg></img>"
+        "d": "<img src=./images/pretest/Q4/exp.png></img>"
       },
       "correctAnswer": "d",
       "difficulty": "Intermediate"
@@ -66,7 +66,7 @@
         "d": "<img src=./images/pretest/Q5/q5_op4.svg></img>"
       },
       "explanations": {
-        "b": "<img src=./images/pretest/Q5/exp.svg></img>"
+        "b": "<img src=./images/pretest/Q5/exp.png></img>"
       },
       "correctAnswer": "b",
       "difficulty": "Intermediate"
