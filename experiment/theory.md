@@ -1,87 +1,226 @@
-# Theory # 
 
-## Vectors and dot products  ##
-To understand orthogonality of signals, we recall the familiar notion of vectors in 3D space and their representation. If \( \textbf{i} \), \( \textbf{j} \), and \( \textbf{k} \) denote the unit vectors along the three perpendicular axes of the reference coordinate system, any arbitrary vector \( \textbf{v} \) can be represented as 
 
-\( \textbf{v} = a \textbf{i} + b \textbf{j} + c \textbf{k} \)
+# Laplace transform # 
 
-In the Cartesian coordinate system, the unit vectors \( \textbf{i}, \textbf{j}, \) and \( \textbf{k} \) correspond to the points (1,0,0), (0,1,0), and (0,0,1) respectively. The dot product of any two vectors \(\textbf{v}_1 = (a_1,b_1,c_1)\) and \(\textbf{v}_2 = (a_2,b_2,c_2)\) is defined as 
+ The Laplace transform of a continuous time signal $\text{x}(t)$ can be expressed as: 
+$$\text{X}(s) = \int_{-\infty}^{\infty} \text{x}(t) e^{-st} dt$$
 
-\(\langle\textbf{v}_1,\textbf{v}_2\rangle = \textbf{v}_1 \cdot \textbf{v}_2 = a_1a_2 + b_1b_2 + c_1c_2 \)
+Where $s = \sigma + j \omega$ represent a complex frequency on a complex number plane. 
 
-By this definition, we can see that any two vectors from the set \( [\textbf{i}, \textbf{j}, \textbf{k}] \)  have zero dot product. In general, any two perpendicular vectors will have zero dot product and are said to be orthogonal to each other. Additionally, when orthogonal unit vectors are used as basis to represent vectors, the coefficients can be easily found. For example, when \( [\textbf{i}, \textbf{j}, \textbf{k}] \)  are used as basis,  
+$$ e^{-st} = e^{-(\sigma+j\omega)t} = e^{-\sigma t} e^{-j\omega t} $$ 
 
-\( a = \textbf{v} \cdot \textbf{i},  \quad b = \textbf{v} \cdot \textbf{j}, \quad c = \textbf{v} \cdot \textbf{k} \)
+We can clearly see that  
+
+$Re\{e^{-s t}\} = e^{-\sigma t} \cos(\omega t)  $
+
+$Im\{e^{-s t}\} =  - e^{-\sigma t} \sin(\omega t)$ 
+
+## Eigenfunctions of LTI systems ##
+
+Let the system $h(t)$ be a linear and time invariant (LTI) system and the input $\text{x}(t) = e^{st}$. The output $\text{y}(t)$ of this system can be written as 
+
+ <p align="center"><img src="Block_diag_1.drawio.png" alt="drawing" width="300"/>
+
+$ \text{y}(t) = e^{st} * h(t) $
+
+$~~~~~~~ =  \int_{-\infty}^{\infty} h(\tau) e^{s(t-\tau)} d\tau $
+
+$~~~~~~~ =  \int_{-\infty}^{\infty}~ h(\tau) ~e^{st}~ e^{-s\tau} ~d\tau $
+
+$~~~~~~~=  e^{st}   \int_{-\infty}^{\infty}~ h(\tau)~ e^{-s\tau} d\tau $
+
+$~~~~~~~       =  H(s) e^{st}  $
+
+$e^{st}$ is known as eigen function for LTI system and it preserved the shape of the input signal. 
+
+Note: 
+1)  All RLC circuits are LTI systems 
+
+2) Any AC source always gives sinusoidal voltage/current across any part of the circuit 
+
+3) The amplitude and phase might change but the shape remains the same 
  
- ## Dot product of signals and orthogonality ##
-In an analogous way, we can generalize and define the notion of dot product (and hence orthogonality) for signals. Signals can be thought of as vectors with infinite dimension. For continuous-time signals \( \textbf{x}_1(t) \) and \( \textbf{x}_2(t) \) , their dot product is defined as 
+The Laplace transform has always two parts:  
 
- \( \langle\textbf{x}_1(t),\textbf{x}_2(t)\rangle~ = \int_{t=-\infty}^{t=\infty} \textbf{x}_1(t) \textbf{x}_2(t) dt \)
+1) Mathematical expression 
 
-Two signals \( \textbf{x}_1(t) \) and \( \textbf{x}_2(t) \) are said to be orthogonal if their dot product, as defined above, is zero, i.e., \( \langle\textbf{x}_1(t),\textbf{x}_2(t)\rangle ~= 0 \). In other words, the product signal \( \textbf{y}(t) = \textbf{x}_1(t) \textbf{x}_2(t) \) has equal amount of positive and negative area.  
+2) Region of convergence: the region in s-plane, where the mathematical expression is valid. 
 
-For periodic signals \( \textbf{x}_1(t) \) and \( \textbf{x}_2(t) \) with same period T, their orthogonality can be verified by computing the integral of the product within a single period T. Thus, periodic signals \( \textbf{x}_1(t) \) and \( \textbf{x}_2(t) \) with period T are orthogonal if 
+## Example: ##
 
-\( \langle\textbf{x}_1(t),\textbf{x}_2(t)\rangle~ = \int_{t=0}^{t=T} \textbf{x}_1(t) \textbf{x}_2(t) dt = 0 \)
+1) $\text{x}(t) = e^{-t} u(t) $
 
-As an example, consider the signals \( \textbf{x}_1(t) = \sin(2\pi t) \) and \( \textbf{x}_2(t) = \cos (4\pi t) \). We can easily verify that their dot product is zero as seen by the product signal below 
+    Solution: We know that Laplace tranform is given as:
 
-<p align="center"><img src="./images/p1_sig_prod.png" alt="drawing" width="400"/<em> <p align="center"> Fig.1: product of sine and cosine signals</em>
+ $~~~~~~~~~~~~~~~~~~~~~~\text{X}(s) = \int_{-\infty}^{\ infty} \text{x}(t) e^{-st} dt $
 
-<p align="center"><img src="./images/p2_sig_prod.png" alt="drawing" width="400"/<em> <p align="center"> Fig.2: Area getting cancelled due to the product of signals</em>
+$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  =  \int_{0}^{\infty} e^{-t}  e^{-st} dt $
 
-The notion of dot product and orthogonality can be extended to complex signals. If \( \textbf{x}_1(t) \) and \( \textbf{x}_2(t) \) are periodic complex-valued signals, their dot product is defined as 
+$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ = \int_{0}^{\ infity}  e^{-(s+1)t} dt $
 
-\( \langle\textbf{x}_1(t),\textbf{x}_2(t)\rangle ~= \int_{t=-\infty}^{t=\infty} \textbf{x}_1^{*}(t) \textbf{x}_2(t) dt \)
+$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~= \frac{1}{s+1} $    
 
-where \( \textbf{x}_1^{*}(t) \) denotes complex conjugate of \( \textbf{x}_1(t) \). For example, the signals \( e^{j \pi t} \) and \( e^{j 2\pi t} \) are orthogonal signals. 
+* Region of convergence (ROC) is region in the s-plane where the above expression is valid.  
+
+* The expression is valid if $Re{\{s+1\}} > 0$   i.e. $Re{\{s\}} > -1$. $ s = -1$ is a point of singularity. 
+
+ <p align="center"><img src="roc1.png" alt="drawing" width="300"/>
+
+ Let $\text{X}(s)$ be the polynomials in $s$ variable as below: 
+
+$$\text{X}(s) = \frac{\text{A}(s)}{\text{B}(s)}$$			 
+
+Roots of $\text{A}(s)$ i.e. $ \text{A}(s) = 0 \rightarrow $ zeros 
+
+Roots of $\text{B}(s)$  i.e. $\text{A}(s) = 0 \rightarrow $ poles 
+
+Note: Poles play important role to decide ROC nit ROC cannot have poles within them. 
+
+## Exercise: ##
+
+ What is the ROC in above example? 
+  <p align="center"><img src="roc2.png" alt="drawing" width="300"/>
+
+## Linear constant coefficient differential equations (LCCDE): ##  
+
+Any linear constant coefficient differential equations (LCCDE) in Laplace domain can be expressed as ratio of polynomials. 
+
+Example: Let $\text{x}(t) = \frac{d\text{y}}{dt} + a~\text{y}(t)$ 
+
+Taking Laplace transform of the above equation: 
+
+$ ~~~~~~~~~~~\text{X}(s) = s\text{Y}(s) + a \text{Y}(s)$
+
+$~~~~~~~~~~~ \text{X}(s) = (s + a)~ \text{Y}(s)$
+
+$~~~~~~~~~~~\text{Y}(s) =  \frac{\text{X}(s)}{s + a}$
+
+$~~~~~~~~~~~ \text{H}(s) = \frac{\text{Y}(s)}{\text{X}(s)} =  \frac{1}{s + a}$  
+
+Here $\text{H}(s)$ is known as transfer function or system function. 
+
+## Application of Laplace transform for system analysis – Causality and stability  ## 
+
+
+<p align="center"><img src="Block_diag_1.drawio.png" alt="drawing" width="300"/>
+
+
+Let $h(t)$ be the system with input $\text{x}(t)$ and output being $\text{y}(t)$.  
+
+$~~~~~\text{y}(t) = \text{x}(t) * h(t)$ 
+
+The system input-output relationship in Laplace transform can be expressed as: 
+
+$~~~\text{Y}(s) = \text{X}(s) \text{H}(s)$ 
+
+We are interested in additional system properties and their effect on impulse response and system function 
+
+## Causality of LTI system:  ##
+
+For LTI system to be causal, we should have 
+
+$~~~~h(t) =0, ~~\forall~ t<0 $ 
+
+$~~~~ \text{y}(t) = \text{x}(t)*h(t) = \int_{-\infty}^{\infty} \text{x}(\tau) h(t-\tau) d\tau$ 
+
+For Causality: we should only use $\text{x}(\tau)$ for $\tau \leq t$ 
+
+$\tau > t,~ h(t-\tau) = 0 $ 
+
+$h(t) = 0~~ \forall~ t<0$ 
+
+* For a causal system ($h(t)$ is a right-sided signal) , what is nature of $\text{H}(s)$ ? 
+
+* ROC of $\text{H}(s)$ will be right-sided plane. (Converse is not true in general) 
+
+* For a system with rational system function, causality is equivalent to the ROC being right-sided plane to the right of right most pole. 
+
+
+Example:
+ 1) $\text{H}(s) = \frac{1}{s+1}~\text{and}~ Re\{s\} > -1$ 
+
+$~~~~~~~~~~h(t) = e^{-t} u(t)$		(Causal) 
+
+2) $\text{H}(s) = \frac{e^s}{s+1}$ and $Re\{s\} > -1$ 
+
+$~~~~~~~~~~h(t) = e^{-(t+1)} u(t+1)$		(Non-causal) 
+
  
- ## Discrete-time signals ##
 
-In a similar fashion, for discrete-time signals, dot product can be defined as 
-
-\( \langle\textbf{x}_1[n],\textbf{x}_2[n]\rangle ~= \sum_{n=-\infty}^{n=\infty} \textbf{x}_1[n] \textbf{x}_2[n] \)
-
-For finite $N$-length signals, dot product can be defined as 
-
-\( \langle\textbf{x}_1[n],\textbf{x}_2[n]\rangle ~= \sum_{n=0}^{n=N-1} \textbf{x}_1[n] \textbf{x}_2[n] \)
-
-## Fourier Series ##
-
-As in vectors, orthogonal signals are extensively used in representation of signals. Very often, they form the building blocks for various ways of signal representation. For example, in Fourier series analysis, a periodic signal is represented using sinusoids as follows: 
-
-\( \textbf{x}(t) = a_0 + a_k \cos(2\pi k f_0 t) + b_k \sin(2\pi k f_0 t),\)
-
-where \( T = \frac{1}{f_0} \) is the period of \( \textbf{x}(t) \). The set of signals \( \{1, \cos(2\pi k f_0 t), \sin(2\pi k f_0 t)\} \) are the building blocks in Fourier series representation of periodic signals, where \( 1 \) denotes the constant signal. All the signals in this set have the common period of \( T \). We can verify that any two signals in this set are orthogonal. Above is the trigonometric Fourier series representation. 
-
-## Haar Wavelet ##
-
-Orthogonality is a recurring feature of many other signal representations, for example wavelet decomposition. In wavelet theory, a mother wavelet function is used to generate the building blocks by performing scaling and translation of this function. The set of functions (wavelets) thus generated form a pairwise orthogonal set of signals. These building blocks can be used to represent any continuous real function with finite support. 
-
-As an example, consider the [Haar mother wavelet](https://en.wikipedia.org/wiki/Haar_wavelet#:~:text=In%20mathematics%2C%20the%20Haar%20wavelet,terms%20of%20an%20orthonormal%20basis.) and its scaled and translated version with scale factor n and shift k given by,  
-
-\( \psi(t) = \left\{\begin{matrix}
-1 \quad 0\leqslant t < \frac{1}{2}\\ 
--1 \quad \frac{1}{2}\leqslant t < 1\\ 
-0 \quad \text{otherwise.}
-\end{matrix}\right. \)
-
-\( \psi _{n,k}(t)=2^{n/2}\psi (2^{n}t-k),\quad t\in \mathbb {R}. \)
-
-<p align="center"><img src="./images/p3_haar_1.png" alt="drawing" width="400"/<em> <p align="center"> Fig.3: Haar wavelet</em>
-
-We can verify that the scaled and shift versions of the Haar wavelet are orthogonal to each other. As a special case, orthogonality of the scaled wavelets \( \phi_1(t) \) and \( \phi_2(t) \) can be seen below, 
-
-<p align="center"><img src="./images/p3_haar_2.png" alt="drawing" width="400"/<em> <p align="center"> Fig.4: Orthogonality of scaled Haar wavelet</em>
+## Stability of LTI system (bounded input bounded output): ##
 
 
-## Advantages of orthogonality ##
- Finding the coefficients becomes easy when a signal is decomposed into a set of orthogonal signals. Consider the trigonometric Fourier series representation given above. We can find the coefficients \( \{a_0, a_k, b_k\} \) by computing the dot product of the given periodic signal \( \textbf{x}(t) \) with the signal associated with each of these components. Thus 
+An LTI system is said to be stable if 
 
-\( a_0 ~= \frac{1}{\pi} \int_{-\pi}^{\pi} \textbf{x}(t)~ dt \)
+$$\int_{\infty}^{\infty} |h(t)| dt < \infty$$ 
 
-\( a_k ~= \frac{1}{\pi} \int_{-\pi}^{\pi} \textbf{x}(t) \cos(kt)~ dt \)
+i.e. $h(t)$ is absolutely integrable 
 
-\( b_k ~= \frac{1}{\pi} \int_{-\pi}^{\pi} \textbf{x}(t) \sin(kt)~ dt \)
+We know Laplace transform is given as: 
 
-Coefficients in other signal representations can be obtained in a similar way.  
+$$~~~~\text{H}(s) = \int_{\infty}^{\infty} h(t) e^{-st} dt$$ 
+
+$$ \text{H}(s)|_{s=0} = \int_{\infty}^{\infty} h(t) dt < \infty$$ 
+
+Laplace transform converges at $s=0$, In fact, for any $s=j\omega = 0+j\omega, ~\text{H}(s)|_{s=j\omega} < \infty \rightarrow $ system is stable 
+
+Note: $j\omega$-axis i.e. $Re\{s\} = 0$ is part of the ROC 
+
+Example:
+
+ 1) Shifting operator:  $h(t) = \delta(t-t_0)$
+ 
+    Taking Laplace transform: $  \text{H}(s) =  e^{st_0}$ 
+    
+    ROC: Full $s$-plane (stable)   
+ 2) Integrator: $h(t) = u(t)$  
+  Taking Laplace transform:  $\text{H}(s) = \frac{1}{s}$ 
+  
+    ROC:  $Re\{s\} > 0$ (Not stable)
+
+Note: A causal system with rational system function is stable if and only if: all the poles have negative real part  
+## Frequency analysis and geometric interpretation: ##
+
+
+Let $ \text{H}(s) = \frac{1}{s+1} $ 
+
+The pole-zero plot on $s$-plane is  
+
+<p align="center"><img src="roc3.png" alt="drawing" width="300"/>
+
+Evaluating $\text{H}(s)$ at any point at $s = s_0$ in the $s$-plane 
+
+$\text{H}(s)|_{s=s_0} = \frac{1}{s_0 +1}$ 
+
+<p align="center"><img src="roc4.png" alt="drawing" width="300"/>
+
+$\text{H}(s)|_{s=s_0} = |\text{H}(s_0)| e^{j\angle \text{H}(s_0)}$ 
+
+$|\text{H}(s_0)|  =  \frac{1}{|s_0 + 1|}$ and $\angle \text{H}(s_0) = \theta$ 
+
+ 
+
+Given a rational system function:  
+
+$\text{H}(s) = \frac{\prod_{i=1}^{M} (s-z_i)}{\prod_{i=1}^{N } (s-p_i)} \quad \text{and ROC~}  N>M $
+
+$|\text{H}(s)|_{s=s_0} = \frac{\prod_{i=1}^{M} (s-z_i)}{\prod_{i=1}^{N }|s_0 -  P_i|}$ 
+
+$\angle \text{H}(s)|_{s=s_0} = \sum_{i=1}^{M} \angle(s_0 – \text{z}_i) - \sum_{i=1}^{N} \angle (s_0 – P_i) $
+
+Example:
+Let $\text{x}(t) = \cos(\omega_0 t)$ for given $\text{H}(s) = \frac{1}{s+1}$ and $Re\{s\} > -1$
+
+$\cos(\omega_0 t) \rightarrow  \frac{1}{\sqrt{1+\omega_0^2}} \cos({\omega_ot-\theta})$
+
+where $\theta = tan^{-1}({\omega_0})$
+
+$|\text{H}(j\omega_o)| =  \frac{1}{\sqrt{1+\omega_0^2}} \rightarrow$ Low pass filter
+
+For any LTI system $ \cos({\omega_o}) \rightarrow |\text{H}(j\omega_o)|\cos({\omega_ot-\theta})$
+
+and $\theta = \angle ~\text{H}{(j\omega_0})$
+
+where $|\text{H}(j\omega_o)| \rightarrow \text{magnitude response}$ and $\angle \text{H}(j\omega_o) \rightarrow \text{phase response}$
+
+The $\text{H}(s) = \frac{s}{s+1} \rightarrow$ High Pass filter
