@@ -3,6 +3,7 @@
   "label": "",
   "basedir": ".",
   "LaTeXinMD": true,
+  "KaTeXinMD": true,
   "units": [
     {
       "unit-type": "aim"
