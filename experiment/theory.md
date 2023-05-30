@@ -1,7 +1,7 @@
 # Theory # 
 
 ## Vectors and dot products  ##
-To understand orthogonality of signals, we recall the familiar notion of vectors in 3D space and their representation. If \( \textbf{i} \), \( \textbf{j} \), and \( \textbf{k} \) denote the unit vectors along the three perpendicular axes of the reference coordinate system, any arbitrary vector \( \textbf{v} \) can be represented as 
+To understand orthogonality of signals, we recall the familiar notion of vectors in 3D space and their representation. If \( \textbf{i} \), \( \textbf{j} \), and \\( \textbf{k} \\) denote the unit vectors along the three perpendicular axes of the reference coordinate system, any arbitrary vector \( \textbf{v} \) can be represented as 
 
 \( \textbf{v} = a \textbf{i} + b \textbf{j} + c \textbf{k} \)
 
