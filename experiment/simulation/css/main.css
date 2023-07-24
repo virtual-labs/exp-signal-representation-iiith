@@ -637,20 +637,17 @@ section .title{
 /* ---------------------------------------------------- Tabs -------------------------------------------- */
 
 .tab {
-  overflow: hidden;
   border: 1px solid #FFFFFF;
   background-color: #FFFFFF;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
-  background-color: inherit;
-  float: left;
+  background-color: inherit;  
   border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  transition: 0.1s;
   font-size: 17px;
 }
 
@@ -682,4 +679,10 @@ table,th,td {
   padding: 10%;
   border: 3px solid black;
   border-collapse: collapse;
+}
+
+#figure1 {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 60%; /* Adjust the aspect ratio as needed */
 }

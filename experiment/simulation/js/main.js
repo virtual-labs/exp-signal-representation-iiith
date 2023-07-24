@@ -164,11 +164,7 @@ function sig(){
         };
           
         Plotly.newPlot('figure1', data, layout, config);
-          var update = {
-            width: 600,
-            height: 400
-        };
-        Plotly.relayout('figure1', update);
+        
 
         return;
     }
@@ -1234,6 +1230,12 @@ function startup()
     document.getElementById("default").click();
     var width = screen.width;
     var height = screen.height;
+    resizePlot();
 }
 
 window.onload = startup;
+window.addEventListener("resize", resizePlot);
+
+function resizePlot() {
+  Plotly.Plots.resize("figure1");
+}
