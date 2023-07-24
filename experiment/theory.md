@@ -1,13 +1,13 @@
 # Theory # 
 
 ## Vectors and dot products  ##
-To understand orthogonality of signals, we recall the familiar notion of vectors in 3D space and their representation. If $ \textbf{i} $, $ \textbf{j} $, and $ \textbf{k} $ denote the unit vectors along the three perpendicular axes of the reference coordinate system, any arbitrary vector $ \textbf{v} $ can be represented as 
+To understand orthogonality of signals, we recall the familiar notion of vectors in 3D space and their representation. If \( \textbf{i} $, \( \textbf{j} $, and \( \textbf{k} $ denote the unit vectors along the three perpendicular axes of the reference coordinate system, any arbitrary vector \( \textbf{v} $ can be represented as 
 
-$ \textbf{v} = a \textbf{i} + b \textbf{j} + c \textbf{k} $
+\( \textbf{v} = a \textbf{i} + b \textbf{j} + c \textbf{k} $
 
-In the Cartesian coordinate system, the unit vectors $ \textbf{i}, \textbf{j}, $ and $ \textbf{k} $ correspond to the points (1,0,0), (0,1,0), and (0,0,1) respectively. The dot product of any two vectors $\textbf{v}_1 = (a_1,b_1,c_1)$ and $\textbf{v}_2 = (a_2,b_2,c_2)$ is defined as 
+In the Cartesian coordinate system, the unit vectors \( \textbf{i}, \textbf{j}, $ and \( \textbf{k} $ correspond to the points (1,0,0), (0,1,0), and (0,0,1) respectively. The dot product of any two vectors \(\textbf{v}_1 = (a_1,b_1,c_1)$ and \(\textbf{v}_2 = (a_2,b_2,c_2)$ is defined as 
 
-$\langle\textbf{v}_1,\textbf{v}_2\rangle = \textbf{v}_1 \cdot \textbf{v}_2 = a_1a_2 + b_1b_2 + c_1c_2 $
+\(\langle\textbf{v}_1,\textbf{v}_2\rangle = \textbf{v}_1 \cdot \textbf{v}_2 = a_1a_2 + b_1b_2 + c_1c_2 $
 
 By this definition, we can see that any two vectors from the set $ [\textbf{i}, \textbf{j}, \textbf{k}] $  have zero dot product. In general, any two perpendicular vectors will have zero dot product and are said to be orthogonal to each other. Additionally, when orthogonal unit vectors are used as basis to represent vectors, the coefficients can be easily found. For example, when $ [\textbf{i}, \textbf{j}, \textbf{k}] $  are used as basis,  
 
