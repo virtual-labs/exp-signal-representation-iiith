@@ -408,7 +408,6 @@ function prod(){
             x: xValues,
             y: yValuesFinal,
             type: 'scatter',
-            name: 's1(t).s2(t)',
             line: {
                 dash: 'solid',
                 width: 3
@@ -419,7 +418,6 @@ function prod(){
             x: xValues,
             y: yValues,
             mode: 'lines',
-            name: 's1(t)',
             type: 'scatter',
             line: {
                 dash: 'dot',
@@ -431,7 +429,6 @@ function prod(){
             x: xValues,
             y: yValues1,
             mode: 'lines',
-            name: 's2(t)',
             type: 'scatter',
             line: {
                 dash: 'dot',
@@ -445,6 +442,7 @@ function prod(){
     
         var layout = {
             title: 'Product of Signals',
+            showlegend: false,
             xaxis: {
                 title: 'Time (t)'
             },
