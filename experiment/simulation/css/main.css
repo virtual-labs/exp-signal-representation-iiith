@@ -33,14 +33,11 @@ html{
     margin: auto;
 }
 
-.signals, .product, .fourier, .haar, footer{
+.signals{
   font-family: 'Poppins', sans-serif;
 }
 
-.signals .signals-content,
-.product .product-content,
-.fourier .fourier-content,
-.haar .haar-content{
+.signals{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -66,112 +63,7 @@ section .title{
   background-attachment: fixed;
   font-family: 'Ubuntu', sans-serif;
 }
-.signals .signals-content{
-  margin-top: 10%;
-}
-.signals .signals-content .left{
-  width: 45%;
-}
-.signals .signals-content .left .input[type=text] {
-  width: 35%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.signals .signals-content .right{
-  width: 55%;
-}
-.signals .signals-content .right .img{
-height: 400px;
-width: 400px;
-object-fit: cover;
-border-radius: 6px;
-}
 
-.product{
-  display: flex;
-  height: 115vh;
-  color: #000000; /* Color of Name, and moving text in first page*/
-  min-height: 500px;
-  padding: 100px 0px;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
-.product .product-content .left{
-  width: 45%;
-}
-.product .product-content .left .input[type=text] {
-  width: 35%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.product .product-content .right{
-  width: 55%;
-}
-.product .product-content .right .img{
-height: 400px;
-width: 400px;
-object-fit: cover;
-border-radius: 6px;
-}
-
-.fourier{
-  display: flex;
-  height: 115vh;
-  color: #000000; /* Color of Name, and moving text in first page*/
-  min-height: 500px;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
-.fourier .fourier-content .left{
-  width: 45%;
-}
-.fourier .fourier-content .left .input[type=text] {
-  width: 35%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.fourier .fourier-content .right{
-  width: 55%;
-}
-.fourier .fourier-content .right .img{
-height: 400px;
-width: 400px;
-object-fit: cover;
-border-radius: 6px;
-}
-
-.haar{
-  display: flex;
-  height: 115vh;
-  color: #000000;
-  min-height: 500px;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
-.haar .haar-content .left{
-  width: 45%;
-}
-.haar .haar-content .left .input[type=text] {
-  width: 35%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.haar .haar-content .right{
-  width: 55%;
-}
-.haar .haar-content .right .img{
-height: 400px;
-width: 400px;
-object-fit: cover;
-border-radius: 6px;
-}
 }
 
 /* ----------------------------------------- Tabs --------------------------------------- */
@@ -183,14 +75,11 @@ border-radius: 6px;
     margin: auto;
 }
 
-.signals, .product, .fourier, .haar, footer{
+.signals{
   font-family: 'Poppins', sans-serif;
 }
 
-.signals .signals-content,
-.product .product-content,
-.fourier .fourier-content,
-.haar .haar-content{
+.signals{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -214,106 +103,7 @@ section .title{
   background-attachment: fixed;
   font-family: 'Ubuntu', sans-serif;
 }
-.signals .signals-content{
-  margin-top: 10%;
-}
-.signals .signals-content .left{
-  width: 50%;
-  position: relative;
-  margin-left: 35%;
-}
-.signals .signals-content .left .input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.signals .signals-content .right{
-  width: 100%;
-  position: relative;
-  margin-top: 20%;
-  margin-left: 15%;
-}
 
-.product{
-  display: flex;
-  color: #000000; /* Color of Name, and moving text in first page*/
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
-.product .product-content{
-  margin-top: 10%;
-}
-.product .product-content .left{
-  width: 50%;
-  position: relative;
-  margin-left: 35%;
-}
-.product .product-content .left .input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.product .product-content .right{
-  width: 100%;
-  position: relative;
-  margin-top: 20%;
-  margin-left: 15%;
-}
-
-.fourier{
-  display: flex;
-  color: #000000; /* Color of Name, and moving text in first page*/
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
-.fourier .fourier-content{
-  margin-top: 10%;
-}
-.fourier .fourier-content .left{
-  width: 50%;
-  position: relative;
-  margin-left: 35%;
-}
-.fourier .fourier-content .left .input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.fourier .fourier-content .right{
-  width: 100%;
-  position: relative;
-  margin-top: 10%;
-  margin-left: 15%;
-}
-
-.haar{
-  display: flex;
-  color: #000000; /* Color of Name, and moving text in first page*/
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
-.haar .haar-content{
-  margin-top: 10%;
-}
-.haar .haar-content .left{
-  width: 50%;
-  position: relative;
-  margin-left: 35%;
-}
-.haar .haar-content .left .input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.haar .haar-content .right{
-  width: 100%;
-  position: relative;
-  margin-top: 10%;
-  margin-left: 15%;
-}
 }
 
 /* --------------------------------------------- Mobiles -------------------------------------- */
@@ -325,14 +115,11 @@ section .title{
     margin: auto;
 }
 
-.signals, .product, .fourier, .haar, footer{
+.signals{
   font-family: 'Poppins', sans-serif;
 }
 
-.signals .signals-content,
-.product .product-content,
-.fourier .fourier-content,
-.haar .haar-content{
+.signals{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -356,106 +143,7 @@ section .title{
   background-attachment: fixed;
   font-family: 'Ubuntu', sans-serif;
 }
-.signals .signals-content{
-  margin-top: 10%;
-}
-.signals .signals-content .left{
-  width: 100%;
-  position: relative;
-  margin-left: 25%;
-}
-.signals .signals-content .left .input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.signals .signals-content .right{
-  width: 100%;
-  position: relative;
-  margin-top: 0%;
-  margin-left: -15%;
-}
 
-.product{
-  display: flex;
-  color: #000000; /* Color of Name, and moving text in first page*/
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
-.product .product-content{
-  margin-top: 10%;
-}
-.product .product-content .left{
-  width: 100%;
-  position: relative;
-  margin-left: 25%;
-}
-.product .product-content .left .input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.product .product-content .right{
-  width: 100%;
-  position: relative;
-  margin-top: 10%;
-  margin-left: -15%;
-}
-
-.fourier{
-  display: flex;
-  color: #000000; /* Color of Name, and moving text in first page*/
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
-.fourier .fourier-content{
-  margin-top: 10%;
-}
-.fourier .fourier-content .left{
-  width: 100%;
-  position: relative;
-  margin-left: 25%;
-}
-.fourier .fourier-content .left .input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.fourier .fourier-content .right{
-  width: 100%;
-  position: relative;
-  margin-top: 10%;
-  margin-left: -15%;
-}
-
-.haar{
-  display: flex;
-  color: #000000; /* Color of Name, and moving text in first page*/
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
-.haar .haar-content{
-  margin-top: 10%;
-}
-.haar .haar-content .left{
-  width: 100%;
-  position: relative;
-  margin-left: 25%;
-}
-.haar .haar-content .left .input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.haar .haar-content .right{
-  width: 100%;
-  position: relative;
-  margin-top: 10%;
-  margin-left: -15%;
-}
 }
 
 /* -------------------------- Drop Down --------------------------------- */
@@ -527,7 +215,7 @@ section .title{
 .fill1 {
   position: relative;
   margin-left: 20%;
-  margin-top: 0%;
+  margin-top: 5%;
   top: 0%;
   left: 0%;
   transform: translate(-50%, -50%);
