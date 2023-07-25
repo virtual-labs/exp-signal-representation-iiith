@@ -165,6 +165,22 @@ function sig(){
           
         Plotly.newPlot('figure1', data, layout, config);
         
+        if(screen.width < 769)
+        {
+            var update = {
+                width: 0.8*screen.width,
+                height: 400
+            };
+        }
+        else
+        {
+            var update = {
+                width: 500,
+                height: 400
+            };
+        }
+
+        Plotly.relayout('figure1', update);
 
         return;
     }
@@ -191,10 +207,22 @@ function sig(){
     };
       
     Plotly.newPlot('figure1', data, layout, config);
-      var update = {
-        width: 400,
-        height: 300
-    };
+    
+    if(screen.width < 769)
+    {
+        var update = {
+            width: 0.8*screen.width,
+            height: 400
+        };
+    }
+    else
+    {
+        var update = {
+            width: 500,
+            height: 400
+        };
+    }
+
     Plotly.relayout('figure1', update);
 }
 
@@ -426,10 +454,22 @@ function prod(){
         };
           
         Plotly.newPlot('figure2', data, layout, config);
-          var update = {
-            width: 400,
-            height: 300
-        };
+        
+        if(screen.width < 769)
+        {
+            var update = {
+                width: 0.8*screen.width,
+                height: 400
+            };
+        }
+        else
+        {
+            var update = {
+                width: 500,
+                height: 400
+            };
+        }
+        
         Plotly.relayout('figure2', update);
         
         return;
@@ -516,10 +556,22 @@ function prod(){
     };
       
     Plotly.newPlot('figure2', data, layout, config);
-      var update = {
-        width: 400,
-        height: 300
-    };
+    
+    if(screen.width < 769)
+    {
+        var update = {
+            width: 0.8*screen.width,
+            height: 400
+        };
+    }
+    else
+    {
+        var update = {
+            width: 500,
+            height: 400
+        };
+    }
+
     Plotly.relayout('figure2', update);
 }
 
@@ -650,10 +702,22 @@ function sine(){
     };
       
     Plotly.newPlot('figure0', data, layout, config);
-      var update = {
-        width: 400,
-        height: 300
-    };
+    
+    if(screen.width < 769)
+    {
+        var update = {
+            width: 0.8*screen.width,
+            height: 400
+        };
+    }
+    else
+    {
+        var update = {
+            width: 500,
+            height: 400
+        };
+    }
+
     Plotly.relayout('figure0', update);
     var element = document.getElementById("in1");
     if(sum==0)
@@ -813,10 +877,22 @@ function four(){
     };
       
     Plotly.newPlot('figure3', data, layout, config);
-      var update = {
-        width: 400,
-        height: 300
-    };
+    
+    if(screen.width < 769)
+    {
+        var update = {
+            width: 0.8*screen.width,
+            height: 400
+        };
+    }
+    else
+    {
+        var update = {
+            width: 500,
+            height: 400
+        };
+    }
+
     Plotly.relayout('figure3', update);
 
     if(k11==k22)
@@ -969,10 +1045,22 @@ function har(){
     };
       
     Plotly.newPlot('figure4', data, layout, config);
-      var update = {
-        width: 400,
-        height: 300
-    };
+    
+    if(screen.width < 769)
+    {
+        var update = {
+            width: 0.8*screen.width,
+            height: 400
+        };
+    }
+    else
+    {
+        var update = {
+            width: 500,
+            height: 400
+        };
+    }
+
     Plotly.relayout('figure4', update);
 }
 
@@ -1201,10 +1289,22 @@ function orth(){
     };
       
     Plotly.newPlot('figure5', data, layout, config);
-      var update = {
-        width: 400,
-        height: 300
-    };
+    
+    if(screen.width < 769)
+    {
+        var update = {
+            width: 0.8*screen.width,
+            height: 400
+        };
+    }
+    else
+    {
+        var update = {
+            width: 500,
+            height: 400
+        };
+    }
+
     Plotly.relayout('figure5', update);
 }
 
