@@ -23,46 +23,6 @@ html{
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-/*
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #2C9AD1;
-}
-
-select,
-input[type="number"] {
-  width: calc(100% - 22px);
-  padding: 10px;
-  margin-bottom: 10%;
-  border: 1px solid #98CB3B;
-  border-radius: 5px;
-  background-color: #FFFFFF;
-  transition: border-color 0.3s ease;
-}
-
-select:focus,
-input[type="number"]:focus {
-  outline: none;
-  border-color: #2C9AD1;
-}
-
-.buttonTotal {
-  display: block;
-  width: calc(100% - 22px);
-  padding: 10px;
-  background-color: #98CB3B;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.buttonTotal:hover {
-  background-color: #2C9AD1;
-  transform: scale(1.05);
-}*/
 
 /* -------------------------------------- Laptops and Desktops -------------------------------------- */
 @media (min-width: 1025px){
