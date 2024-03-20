@@ -10,6 +10,34 @@ function openPart(evt, name) {
     }
     document.getElementById(name).style.display = "block";
     evt.currentTarget.className += " active";
+    if(!name.localeCompare('Signal'))
+    {
+        sig();
+    }
+    else if(!name.localeCompare('Prod'))
+    {
+        prod();
+    }
+    else if(!name.localeCompare('Sine'))
+    {
+        sine()
+        renderMathInElement(document.body);
+    }
+    else if(!name.localeCompare('Four'))
+    {
+        four();
+        renderMathInElement(document.body);
+    }
+    else if(!name.localeCompare('Haar'))
+    {
+        har();
+        renderMathInElement(document.body);
+    }
+    else
+    {
+        orth();
+        renderMathInElement(document.body);
+    }
 }
 
 // ------------------------------------------ Signal Plotting ----------------------------------------------------------
@@ -135,7 +163,7 @@ function sig(){
                 title: 'Time (t)'
             },
             yaxis2: {
-                title: 'Amplitude (A)'
+                title: ' '
             },
             annotations: [{
                 text: "Real Part",
@@ -150,7 +178,7 @@ function sig(){
                 yref: 'y',
             },
             {
-                text: "Imaginery",
+                text: "imaginary",
                 font: {
                   size: 16,
                 },
@@ -540,7 +568,7 @@ function prod(){
             yref: 'y',
         },
         {
-            text: "Imaginery",
+            text: "imaginary",
             font: {
               size: 16,
             },
@@ -738,8 +766,8 @@ function four(){
 	k11 = document.getElementById("k1").value
 	k22 = document.getElementById("k2").value
     
-    k11 = parseFloat(k11);
-    k22 = parseFloat(k22);
+    k11 = parseInt(k11);
+    k22 = parseInt(k22);
 
     if(N<2)
     {
@@ -756,14 +784,15 @@ function four(){
         k22 = N-1;
     }
     
-    var xValues = makeArr(-2,2,1000);
+    var xValues = makeArr(-N/2,N/2,1000);
+    var am = 1;
 
     yValuesFinalReal = [];
     yValuesFinalImag = [];
     for(var i=0; i<1000; i++)
     {
-        yValuesFinalReal.push(am*am*(Math.cos(2*Math.PI*k11*xValues[i]/N))*(Math.cos(2*Math.PI*k22*xValues[i]/N)) - am*am*(Math.sin(2*Math.PI*k11*xValues[i]/N))*(Math.sin(2*Math.PI*k22*xValues[i]/N)));
-        yValuesFinalImag.push(am*am*(Math.cos(2*Math.PI*k11*xValues[i]/N))*(Math.sin(2*Math.PI*k22*xValues[i]/N)) + am*am*(Math.sin(2*Math.PI*k11*xValues[i]/N))*(Math.cos(2*Math.PI*k22*xValues[i]/N)));
+        yValuesFinalReal.push(am*am*(Math.cos(2*Math.PI*(k11-k22)*xValues[i]/N)));
+        yValuesFinalImag.push(am*am*(Math.sin(2*Math.PI*(k22-k11)*xValues[i]/N)));
     }
     
     yValuesPosReal = [];
@@ -846,7 +875,7 @@ function four(){
             title: 'Time (t)'
         },
         yaxis2: {
-            title: 'Amplitude (A)'
+            title: ' '
         },
         annotations: [{
             text: "Real Part",
@@ -861,7 +890,7 @@ function four(){
             yref: 'y',
         },
         {
-            text: "Imaginery",
+            text: "imaginary",
             font: {
               size: 16,
             },
@@ -895,7 +924,7 @@ function four(){
 
     if(k11==k22)
     {
-        sum = 1.00;
+        sum = N;
         var element = document.getElementById("in2");
         if(sum==0)
         {
@@ -933,6 +962,8 @@ function har(){
     
     sig5 = parseFloat(sig5);
     sig6 = parseFloat(sig6);
+
+    var am1 = 1;
 
     var xValues = makeArr(-2,2,1000);
     var yValues1 = [];
@@ -1319,12 +1350,6 @@ function makeArr(startValue, stopValue, cardinality) {
 
 function startup()
 {
-    sig();
-    prod();
-    sine();
-    four();
-    har();
-    orth();
     document.getElementById("default").click();
     var width = screen.width;
     var height = screen.height;

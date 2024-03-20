@@ -12,14 +12,14 @@ This section requires selection of signal and tweaking of some parameters of the
 
 The parameters mentioned as "Parameter 1" and "Parameter 2" for the signals correspond to the parameters as listed below
 
-| Signal         |Parameter 1                          |Parameter 2                         |
-|----------------|-------------------------------|-----------------------------|
-|Sine|Frequency            |Amplitude            |
-|Cosine|Frequency|Amplitude|
-|Ramp|-|Amplitude|
-|Pulse|-|Amplitude|
-|Haar|Scale Parameter|Amplitude|
-|Complex Exponential|Frequency|Amplitude|
+| Signal     |Parameter 1                   |Parameter 2                      |  Signal      |
+|----------------|-------------------------------|-----------------------------|--------------------|
+|Sine|Frequency            |Amplitude            | x(t) = \( A \texttt{sin}(2\pi ft) \) |
+|Cosine|Frequency|Amplitude| x(t) = \( A \texttt{sin}(2\pi ft) \) |
+|Ramp|-|Amplitude| x(t) = At |
+|Pulse|-|Amplitude| x(t) = A \( I_{[-2,2]} \) |
+|Haar|Scale Parameter|Amplitude| x(t) = A \( I_{[\frac{-1}{2^{s}},0]} - I_{[0,\frac{-1}{2^{s}}]}\) |
+|Complex Exponential|Frequency|Amplitude| x(t) = \( A e^{2\pi ft} \) |
 
 The plot is obtained and it represents the selected signal with the specified parameters.
 
