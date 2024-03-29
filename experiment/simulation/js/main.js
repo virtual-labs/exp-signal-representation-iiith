@@ -13,10 +13,12 @@ function openPart(evt, name) {
     if(!name.localeCompare('Signal'))
     {
         sig();
+        renderMathInElement(document.body);
     }
     else if(!name.localeCompare('Prod'))
     {
         prod();
+        renderMathInElement(document.body);
     }
     else if(!name.localeCompare('Sine'))
     {
@@ -103,11 +105,11 @@ function sig(){
         var yValues = [];
         for (var i=0; i<1000; i++)
         {
-            if(i<parseFloat(500/freq))
+            if(i<parseFloat(500/(Math.pow(2,freq))))
             {
                 yValues.push(am);
             }
-            else if(i<parseFloat(1000/freq))
+            else if(i<parseFloat(1000/(Math.pow(2,freq))))
             {
                 yValues.push(-am);
             }
@@ -317,11 +319,11 @@ function prod(){
         var yValues = [];
         for (var i=0; i<1000; i++)
         {
-            if(i<parseFloat(500/freq))
+            if(i<parseFloat(500/(Math.pow(2,freq))))
             {
                 yValues.push(am);
             }
-            else if(i<parseFloat(1000/freq))
+            else if(i<parseFloat(1000/(Math.pow(2,freq))))
             {
                 yValues.push(-am);
             }
@@ -403,11 +405,11 @@ function prod(){
         var yValues1 = [];
         for (var i=0; i<1000; i++)
         {
-            if(i<parseFloat(500/freq1))
+            if(i<parseFloat(500/(Math.pow(2,freq1))))
             {
                 yValues1.push(am1);
             }
-            else if(i<parseFloat(1000/freq1))
+            else if(i<parseFloat(1000/(Math.pow(2,freq1))))
             {
                 yValues1.push(-am1);
             }
@@ -1093,6 +1095,8 @@ function har(){
     Plotly.relayout('figure4', update);
 }
 
+/* ------------------------------------------------------- Orthogonality test ------------------------------------------------------- */
+
 function orth(){
     var sel = document.getElementById("sig-names7").value;
     sel = parseFloat(sel);
@@ -1101,9 +1105,11 @@ function orth(){
     am = document.getElementById("amp3").value;
     am = parseFloat(am);
     
+    var xValues = makeArr(-2*Math.PI,2*Math.PI,1000);
+
     if(sel==1)
     {
-        var xValues = makeArr(-2*Math.PI,2*Math.PI,1000);
+        //var xValues = makeArr(-2*Math.PI,2*Math.PI,1000);
         var yValues = [];
         for (var i=0; i<1000; i++)
         {
@@ -1112,7 +1118,7 @@ function orth(){
     }
     else if(sel==2)
     {
-        var xValues = makeArr(-2*Math.PI,2*Math.PI,1000);
+        //var xValues = makeArr(-2*Math.PI,2*Math.PI,1000);
         var yValues = [];
         for (var i=0; i<1000; i++)
         {
@@ -1121,7 +1127,7 @@ function orth(){
     }
     else if(sel==3)
     {
-        var xValues = makeArr(-2,2,1000);
+        //var xValues = makeArr(-2,2,1000);
         var yValues = [];
         for (var i=0; i<1000; i++)
         {
@@ -1130,7 +1136,7 @@ function orth(){
     }
     else if(sel==4)
     {
-        var xValues = makeArr(-2,2,1000);
+        //var xValues = makeArr(-2,2,1000);
         var yValues = [];
         for (var i=0; i<1000; i++)
         {
@@ -1150,15 +1156,15 @@ function orth(){
     }
     else
     {
-        var xValues = makeArr(-2,2,1000);
+        //var xValues = makeArr(-2,2,1000);
         var yValues = [];
         for (var i=0; i<1000; i++)
         {
-            if(i<parseFloat(500/freq))
+            if(i<parseFloat(500/(Math.pow(2,freq))))
             {
                 yValues.push(am);
             }
-            else if(i<parseFloat(1000/freq))
+            else if(i<parseFloat(1000/(Math.pow(2,freq))))
             {
                 yValues.push(-am);
             }
@@ -1175,10 +1181,12 @@ function orth(){
     freq1 = parseFloat(freq1);
     am1 = document.getElementById("amp4").value;
     am1 = parseFloat(am1);
+
+    var xValues1 = makeArr(-2*Math.PI,2*Math.PI,1000);
     
     if(sel1==1)
     {
-        var xValues1 = makeArr(-2*Math.PI,2*Math.PI,1000);
+        //var xValues1 = makeArr(-2*Math.PI,2*Math.PI,1000);
         var yValues1 = [];
         for (var i=0; i<1000; i++)
         {
@@ -1187,7 +1195,7 @@ function orth(){
     }
     else if(sel1==2)
     {
-        var xValues1 = makeArr(-2*Math.PI,2*Math.PI,1000);
+        //var xValues1 = makeArr(-2*Math.PI,2*Math.PI,1000);
         var yValues1 = [];
         for (var i=0; i<1000; i++)
         {
@@ -1196,7 +1204,7 @@ function orth(){
     }
     else if(sel1==3)
     {
-        var xValues1 = makeArr(-2,2,1000);
+        //var xValues1 = makeArr(-2,2,1000);
         var yValues1 = [];
         for (var i=0; i<1000; i++)
         {
@@ -1205,7 +1213,7 @@ function orth(){
     }
     else if(sel1==4)
     {
-        var xValues1 = makeArr(-2,2,1000);
+        //var xValues1 = makeArr(-2,2,1000);
         var yValues1 = [];
         for (var i=0; i<1000; i++)
         {
@@ -1225,15 +1233,15 @@ function orth(){
     }
     else
     {
-        var xValues1 = makeArr(-2,2,1000);
+        //var xValues1 = makeArr(-2,2,1000);
         var yValues1 = [];
         for (var i=0; i<1000; i++)
         {
-            if(i<parseFloat(500/freq1))
+            if(i<parseFloat(500/(Math.pow(2,freq1))))
             {
                 yValues1.push(am1);
             }
-            else if(i<parseFloat(1000/freq1))
+            else if(i<parseFloat(1000/(Math.pow(2,freq1))))
             {
                 yValues1.push(-am1);
             }
@@ -1252,8 +1260,10 @@ function orth(){
         sum += yValuesFinal[i];
     }
 
+    //console.log(sum);
+
     sum /= 1000;
-    if(sum<0.001)
+    if(Math.abs(sum)<0.01)
     {
         sum = 0;
     }
