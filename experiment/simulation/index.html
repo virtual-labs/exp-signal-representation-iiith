@@ -59,36 +59,55 @@
 									<th>Signal</th>
 									<th>Parameter 1</th>
 									<th>Parameter 2</th>
+									<th>Formula</th>
 								</tr>
 								<tr>
 									<td>Sine</td>
 									<td>Frequency</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ \texttt{sin}(\frac{2\pi kt}{N}) \)
+									</td>
 								</tr>
 								<tr>
 									<td>Cosine</td>
 									<td>Frequency</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ \texttt{cos}(\frac{2\pi kt}{N}) \)
+									</td>
 								</tr>
 								<tr>
 									<td>Ramp</td>
 									<td>-</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ t \)
+									</td>
 								</tr>
 								<tr>
 									<td>Pulse</td>
 									<td>-</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ \mathcal{I}_{[\frac{-2}{3},\frac{2}{3}]} \)
+									</td>
 								</tr>
 								<tr>
 									<td>Haar</td>
 									<td>Scale Parameter</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ \mathcal{I}_{[-2,-2+\frac{1}{2^{s-1}}]} - \mathcal{I}_{[-2+\frac{1}{2^{s-1}},-2+\frac{1}{2^{s-2}}]} \)
+									</td>
 								</tr>
 								<tr>
 									<td>Complex Exponential</td>
 									<td>Frequency</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ e^{jft} \)
+									</td>
 								</tr>
 							</table>
 						</h3>
@@ -110,8 +129,8 @@
 						  <option value="6">Complex Exponential</option>
 						</select>
 					</div>
-                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre" value=1 step=0.5> </div>
-					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp" value=1 step=0.5> </div>
+                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre" value=1 step=1> </div>
+					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp" value=1 step=1> </div>
 					<button class="buttonTotal" id="jsbutton" role="button" onClick="sig()">Plot</button>
 					
 				</div>
@@ -160,36 +179,55 @@
 									<th>Signal</th>
 									<th>Parameter 1</th>
 									<th>Parameter 2</th>
+									<th>Formula</th>
 								</tr>
 								<tr>
 									<td>Sine</td>
 									<td>Frequency</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ \texttt{sin}(\frac{2\pi kt}{N}) \)
+									</td>
 								</tr>
 								<tr>
 									<td>Cosine</td>
 									<td>Frequency</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ \texttt{cos}(\frac{2\pi kt}{N}) \)
+									</td>
 								</tr>
 								<tr>
 									<td>Ramp</td>
 									<td>-</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ t \)
+									</td>
 								</tr>
 								<tr>
 									<td>Pulse</td>
 									<td>-</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ \mathcal{I}_{[\frac{-2}{3},\frac{2}{3}]} \)
+									</td>
 								</tr>
 								<tr>
 									<td>Haar</td>
 									<td>Scale Parameter</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ \mathcal{I}_{[-2,-2+\frac{1}{2^{s-1}}]} - \mathcal{I}_{[-2+\frac{1}{2^{s-1}},-2+\frac{1}{2^{s-2}}]} \)
+									</td>
 								</tr>
 								<tr>
 									<td>Complex Exponential</td>
 									<td>Frequency</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ e^{jft} \)
+									</td>
 								</tr>
 							</table>
 						</h3>
@@ -212,8 +250,8 @@
 						  <option value="6">Complex Exponential</option>
 						</select>
 					</div>
-                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre1" value=1 step=0.5> </div>
-					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp1" value=1 step=0.5> </div>
+                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre1" value=1 step=1> </div>
+					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp1" value=1 step=1> </div>
 					<div class="box">
 						<select id="sig-names2">
 						  <option value="1">Sine</option>
@@ -224,8 +262,8 @@
 						  <option value="6">Complex Exponential</option>
 						</select>
 					</div>
-                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre2" value=1 step=0.5> </div>
-					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp2" value=1 step=0.5> </div>
+                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre2" value=1 step=1> </div>
+					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp2" value=1 step=1> </div>
 					<button class="buttonTotal" id="jsbuttonTotal" role="button" onClick="prod()">Plot</button>
 				</div>
 			</div>
@@ -248,7 +286,7 @@
         <div class="max-width">
             <h2 class="title">Orthogonality of Real Sinusoids</h2>
 			<div class="columns is-centered">
-				<div class="v-collapsible-instruction-container v-instruction-container">
+				<div class="v-collapsible-instruction-container v-instruction-container" style="width: 75%; margin-right: 11%; margin-bottom: 1%;">
 					<div class="v-collapsible is-size-5">Instructions</div>
 					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
 						<h3> In this section, you can select two real sinusoidal signals (sine or cosine) and adjust a scale parameter to observe how their product and orthogonality change with different parameters. The goal is to visualize the product of the two signals and determine their orthogonality. </h3>
@@ -274,7 +312,7 @@
 						<br>
 						<h3> The resulting plot shows the product of the two signals with the selected parameters. The shaded areas above the x-axis (positive integrals) and below the x-axis (negative integrals) use different colors to indicate which areas cancel out during a complete integration, determining the orthogonality between the signals. </h3>
 						<br>
-						<h3> <b> The observations tab at the bottom displays the integral of the product of the signals. If the value is zero, the signals are orthogonal. If the value is non-zero, the signals are not orthogonal. </b> </h3>
+						<h3> <b> The observations tab at the bottom displays the integral of the product of the signals. If the value is zero, the signals are orthogonal. If the value is non-zero, the signals are not orthogonal. </b> </h3>	
 					</div>
 				</div>
 			</div>
@@ -290,19 +328,19 @@
 						  <option value="2">Cosine</option>
 						</select>
 					</div>
-					<div class="fill"> k &emsp; <input type=number id="k0" value=1 step=0.5> </div>
+					<div class="fill"> k &emsp; <input type=number id="k0" value=1 step=1> </div>
 					<div class="box">
 						<select id="sig-names-1">
 						  <option value="1">Sine</option>
 						  <option value="2">Cosine</option>
 						</select>
 					</div>
-					<div class="fill"> k &emsp; <input type=number id="k01" value=1 step=0.5> </div>
+					<div class="fill"> k &emsp; <input type=number id="k01" value=1 step=1> </div>
 					<button class="buttonTotal" id="jsbutton0" role="button" onClick="sine()">Plot</button>
 				</div>
 			</div>
 
-			<div class="column is-8-desktop is-4-tablet is-12-mobile">
+			<div class="column is-6-desktop is-4-tablet is-12-mobile">
 				<div class="box-question">
 					<div class="v-datalist-title">Plot</div>
 					<div id="observations3">
@@ -310,20 +348,19 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="column is-6-desktop is-4-tablet is-12-mobile">
 				<div class="v-datalist-container components-list" style="margin-top: 10%; margin-bottom: 25%;">
 					<div class="v-datalist-title">Observations</div>
 					<div class="v-datalist-row">
-						<h3> \( \int_{-N}^{N} x_{1}(t) x_{2}(t) dt = \) 
+						<h3> \( \int_{-N}^{N} x_{1}(t) x_{2}^{*}(t) dt = \) 
 						</h3>
 						<div id="in1"></div>
 					</div>
 				</div>
 			</div>
-
-		
-
+			</div>
+					
     </section>
 </div>
 
@@ -332,7 +369,7 @@
         <div class="max-width">
             <h2 class="title">Orthogonality of Complex Sinusoids</h2>
 			<div class="columns is-centered">
-				<div class="v-collapsible-instruction-container v-instruction-container">
+				<div class="v-collapsible-instruction-container v-instruction-container" style="width: 90%; margin-bottom: 1%;">
 					<div class="v-collapsible is-size-5">Instructions</div>
 					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
 						<h3> This section shows two complex sinusoidal signals and their product. </h3>
@@ -365,9 +402,9 @@
 				<div class="box-question">
 
                     <h4>Enter k for Signal 1</h4>
-					<div class="fill"> &emsp; <input type=number id="k1" value=2 step=0.5> </div>
+					<div class="fill"> &emsp; <input type=number id="k1" value=2 step=1> </div>
 					<h4>Enter k for Signal 2</h4>
-					<div class="fill"> &emsp; <input type=number id="k2" value=1 step=0.5> </div>
+					<div class="fill"> &emsp; <input type=number id="k2" value=1 step=1> </div>
 					<button class="buttonTotal" id="jsbuttonTotal" role="button" onClick="four()">Plot</button>
 				</div>
 			</div>
@@ -497,36 +534,55 @@
 									<th>Signal</th>
 									<th>Parameter 1</th>
 									<th>Parameter 2</th>
+									<th>Formula</th>
 								</tr>
 								<tr>
 									<td>Sine</td>
 									<td>Frequency</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ \texttt{sin}(\frac{2\pi kt}{N}) \)
+									</td>
 								</tr>
 								<tr>
 									<td>Cosine</td>
 									<td>Frequency</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ \texttt{cos}(\frac{2\pi kt}{N}) \)
+									</td>
 								</tr>
 								<tr>
 									<td>Ramp</td>
 									<td>-</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ t \)
+									</td>
 								</tr>
 								<tr>
 									<td>Pulse</td>
 									<td>-</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ \mathcal{I}_{[\frac{-2}{3},\frac{2}{3}]} \)
+									</td>
 								</tr>
 								<tr>
 									<td>Haar</td>
 									<td>Scale Parameter</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ \mathcal{I}_{[-2,-2+\frac{1}{2^{s-1}}]} - \mathcal{I}_{[-2+\frac{1}{2^{s-1}},-2+\frac{1}{2^{s-2}}]} \)
+									</td>
 								</tr>
 								<tr>
 									<td>Complex Exponential</td>
 									<td>Frequency</td>
 									<td>Amplitude</td>
+									<td>
+										\( x(t) = A\ e^{jft} \)
+									</td>
 								</tr>
 							</table>
 						</h3>
@@ -548,8 +604,8 @@
 						  <option value="5">Haar</option>
 						</select>
 					</div>
-                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre3" value=1 step=0.5> </div>
-					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp3" value=1 step=0.5> </div>
+                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre3" value=1 step=1> </div>
+					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp3" value=1 step=1> </div>
 					<div class="box">
 						<select id="sig-names8">
 						  <option value="1">Sine</option>
@@ -559,8 +615,8 @@
 						  <option value="5">Haar</option>
 						</select>
 					</div>
-                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre4" value=1 step=0.5> </div>
-					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp4" value=1 step=0.5> </div>
+                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre4" value=1 step=1> </div>
+					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp4" value=1 step=1> </div>
 					<button class="buttonTotal" id="jsbutton4" role="button" onClick="orth()">Plot</button>
 				</div>
 			</div>

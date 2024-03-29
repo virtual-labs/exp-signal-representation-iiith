@@ -17,8 +17,8 @@ The parameters mentioned as "Parameter 1" and "Parameter 2" for the signals corr
 |Sine|Frequency            |Amplitude            | x(t) = \( A \texttt{sin}(2\pi ft) \) |
 |Cosine|Frequency|Amplitude| x(t) = \( A \texttt{sin}(2\pi ft) \) |
 |Ramp|-|Amplitude| x(t) = At |
-|Pulse|-|Amplitude| x(t) = A \( I_{[-2,2]} \) |
-|Haar|Scale Parameter|Amplitude| x(t) = A \( I_{[\frac{-1}{2^{s}},0]} - I_{[0,\frac{-1}{2^{s}}]}\) |
+|Pulse|-|Amplitude| x(t) = A \( \mathcal{I}_{[-\frac{2}{3},\frac{2}{3}]} \) |
+|Haar|Scale Parameter|Amplitude| x(t) = A \( \mathcal{I}_{[-2,-2+\frac{1}{2^{s-1}}]} - \mathcal{I}_{[-2+\frac{1}{2^{s-1}},-2+\frac{1}{2^{s-2}}]} \) |
 |Complex Exponential|Frequency|Amplitude| x(t) = \( A e^{2\pi ft} \) |
 
 The plot is obtained and it represents the selected signal with the specified parameters.
