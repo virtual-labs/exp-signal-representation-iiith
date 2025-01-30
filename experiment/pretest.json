@@ -2,71 +2,71 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "<img src=./images/pretest/Q1/Q1.svg></img>",
+      "question": "Let $v_1=\\left[\\begin{array}{lll}1 & 0 & 0\\end{array}\\right]^T, v_2=\\left[\\begin{array}{lll}1 & 2 & 0\\end{array}\\right]^T$ and $v_3=\\left[\\begin{array}{ll}0 & 3 & 2\\end{array}\\right]^T$. Which pairs of vectors are orthogonal to each other?",
       "answers": {
-        "a": "<img src=./images/pretest/Q1/q1_op1.svg></img>",
-        "b": "<img src=./images/pretest/Q1/q1_op2.svg></img>",
-        "c": "<img src=./images/pretest/Q1/q1_op3.svg></img>",
-        "d": "<img src=./images/pretest/Q1/q1_op4.svg></img>"
+        "a": "$v_1$ and $v_2$",
+        "b": "$v_2$ and $v_3$",
+        "c": "$v_1$ and $v_3$",
+        "d": "all above"
       },
       "explanations": {
-        "c": "<img src=./images/pretest/Q1/exp.png></img>"
+        "c": "Explanation for question 1"
       },
       "correctAnswer": "c",
       "difficulty": "Beginner"
     },
     {
-      "question": "<img src=./images/pretest/Q2/Q2.svg>",
+      "question": "What is $a_0$ for the periodic signal $x(t)=\\frac{\\sqrt{(1-\\sin (x))}}{2}$ ?",
       "answers": {
-        "a": "<img src=./images/pretest/Q2/q2_op1.svg>",
-        "b": "<img src=./images/pretest/Q2/q2_op2.svg>",
-        "c": "<img src=./images/pretest/Q2/q2_op3.svg>",
-        "d": "<img src=./images/pretest/Q2/q2_op4.svg>"
+        "a": "$\\frac{1}{2}$",
+        "b": "$\\pi$",
+        "c": "0",
+        "d": "$\\frac{3}{2} \\pi$"
       },
       "explanations": {
-        "c": "<img src=./images/pretest/Q2/exp.png>"
+        "c": "Explanation for question 2"
       },
       "correctAnswer": "c",
       "difficulty": "Beginner"
     },
     {
-      "question": "<img src=./images/pretest/Q3/Q3.svg>",
+      "question": "What is $\\exp (j \\theta)$ equal to, where $j$ is the square root of unity?",
       "answers": {
-        "a": "<img src=./images/pretest/Q3/q3_op1.svg>",
-        "b": "<img src=./images/pretest/Q3/q3_op2.svg>",
-        "c": "<img src=./images/pretest/Q3/q3_op3.svg>",
-        "d": "<img src=./images/pretest/Q3/q3_op4.svg>"
+        "a": "$\\sin (\\theta)+\\cos (\\theta)$",
+        "b": "$\\cos (\\theta)+j \\sin (\\theta)$",
+        "c": "$\\sin (\\theta)+j \\cos (\\theta)$",
+        "d": "$j \\cos (\\theta)+j \\sin (\\theta)$"
       },
       "explanations": {
-        "b": "<img src=./images/pretest/Q3/exp.png>"
+        "b": "Explanation for question 3"
       },
       "correctAnswer": "b",
       "difficulty": "Beginner"
     },
     {
-      "question": "<img src=./images/pretest/Q4/Q4.svg>",
+      "question": "If the signals $x_1(t)$ and $x_2(t)$ are orthogonal in $[0 , T]$, then the signals",
       "answers": {
-        "a": "<img src=./images/pretest/Q4/q4_op1.svg>",
-        "b": "<img src=./images/pretest/Q4/q4_op2.svg>",
-        "c": "<img src=./images/pretest/Q4/q4_op3.svg>",
-        "d": "<img src=./images/pretest/Q4/q4_op4.svg>"
+        "a": "$-x_1(t)$ and $-x_2(t)$ are orthogonal in $[0 , T]$",
+        "b": "$x_1(-t)$ and $x_2(-t)$ are orthogonal in $[-T ,  0]$",
+        "c": "$y(t)=x_1(t) x_2(t)$ and $z(t)=1$ are orthogonal in $[0 , T]$",
+        "d": "all above"
       },
       "explanations": {
-        "d": "<img src=./images/pretest/Q4/exp.png>"
+        "d": "Explanation for question 4"
       },
       "correctAnswer": "d",
       "difficulty": "Intermediate"
     },
     {
-      "question": "<img src=./images/pretest/Q5/Q5.svg>",
+      "question": "If vectors $v_1$ and $v_2$ are orthogonal and vectors $v_2$ and $v_3$ are orthogonal, then which of the following statement is true",
       "answers": {
-        "a": "<img src=./images/pretest/Q5/q5_op1.svg>",
-        "b": "<img src=./images/pretest/Q5/q5_op2.svg>",
-        "c": "<img src=./images/pretest/Q5/q5_op3.svg>",
-        "d": "<img src=./images/pretest/Q5/q5_op4.svg>"
+        "a": "$v_1$ and $v_3$ are always orthogonal",
+        "b": "$v_1$ and $v_3$ may not be orthogonal",
+        "c": "$v_2$ may not be orthogonal to ( $v_1+v_3$ )",
+        "d": "$v_1$ is always orthogonal to $\\left(v_2+v_3\\right)$"
       },
       "explanations": {
-        "b": "<img src=./images/pretest/Q5/exp.png>"
+        "b": "Explanation for question 5"
       },
       "correctAnswer": "b",
       "difficulty": "Intermediate"

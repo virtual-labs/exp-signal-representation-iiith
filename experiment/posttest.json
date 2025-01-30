@@ -2,74 +2,74 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "<img src=./images/posttest/Q1/Q1.png></img>",
+      "question": "Two signals $x_1(t)$ and $x_2(t)$ are orthogonal if",
       "answers": {
-        "a": "<img src=./images/posttest/Q1/q1_op1.png></img>",
-        "b": "<img src=./images/posttest/Q1/q1_op2.png></img>",
-        "c": "<img src=./images/posttest/Q1/q1_op3.png></img>",
-        "d": "<img src=./images/posttest/Q1/q1_op4.png></img>"
+        "a": "their product is always zero",
+        "b": "their dot product is zero",
+        "c": "their sum is always zero",
+        "d": "their dot product is positive"
       },
       "explanations": {
-        "a": "<img src=./images/posttest/Q1/exp.png></img>"
+        "b": "Explanation for question 1"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "Beginner"
     },
     {
-      "question": "<img src=./images/posttest/Q2/Q2.png></img>",
+      "question": "The signals $\\sin (t)$ and $\\sin (\\alpha t)$ are orthogonal in the interval $[0, 2\\pi]$ if",
       "answers": {
-        "a": "<img src=./images/posttest/Q2/q2_op1.png></img>",
-        "b": "<img src=./images/posttest/Q2/q2_op2.png></img>",
-        "c": "<img src=./images/posttest/Q2/q2_op3.png></img>",
-        "d": "<img src=./images/posttest/Q2/q2_op4.png></img>"
+        "a": "$\\alpha$ is any integer",
+        "b": "$\\alpha$ is any integer other than 1",
+        "c": "$\\alpha$ is any integer other than 1 or -1",
+        "d": "none of the above"
       },
       "explanations": {
-        "c": "<img src=./images/posttest/Q2/exp.png></img>"
+        "c": "Explanation for question 2"
       },
       "correctAnswer": "c",
       "difficulty": "Intermediate"
     },
     {
-      "question": "<img src=./images/posttest/Q3/Q3.png></img>",
+      "question": "Which of the signals are orthogonal to each other, $x_1(t)=\\psi(t), x_2(t)=\\cos (2 \\pi t), x_3(t)=\\psi(2 t)$ in the period $[0,1]$?",
       "answers": {
-        "a": "<img src=./images/posttest/Q3/q3_op1.png></img>",
-        "b": "<img src=./images/posttest/Q3/q3_op2.png></img>",
-        "c": "<img src=./images/posttest/Q3/q3_op3.png></img>",
-        "d": "<img src=./images/posttest/Q3/q3_op4.png></img>"
+        "a": "$x_1(t)$ and $x_2(t)$",
+        "b": "$x_1(t)$ and $x_3(t)$",
+        "c": "$x_3(t)$ and $x_2(t)$",
+        "d": "(a) and (b)"
       },
       "explanations": {
-        "b": "<img src=./images/posttest/Q3/exp.png></img>"
+        "d": "Explanation for question 3"
       },
-      "correctAnswer": "b",
+      "correctAnswer": "d",
       "difficulty": "Intermediate"
     },
     {
-      "question": "<img src=./images/posttest/Q4/Q4.png></img>",
+      "question": "Which pairs of signals are orthogonal among $x_1(t)=\\cos (t), x_2(t)=5 \\sin (5 t), x_3(t)=\\sin (t)$ in the period $[0, 2\\pi]$?",
       "answers": {
-        "a": "<img src=./images/posttest/Q4/q4_op1.png></img>",
-        "b": "<img src=./images/posttest/Q4/q4_op2.png></img>",
-        "c": "<img src=./images/posttest/Q4/q4_op3.png></img>",
-        "d": "<img src=./images/posttest/Q4/q4_op4.png></img>"
+        "a": "$x_1(t)$ and $x_2(t)$",
+        "b": "$x_1(t)$ and $x_3(t)$",
+        "c": "$x_3(t)$ and $x_2(t)$",
+        "d": "all the above"
       },
       "explanations": {
-        "d": "<img src=./images/posttest/Q4/exp.png></img>"
+        "d": "Explanation for question 4"
       },
       "correctAnswer": "d",
-      "difficulty": "Beginner"
+      "difficulty": "Intermediate"
     },
     {
-      "question": "<img src=./images/posttest/Q5/Q5.png></img>",
+      "question": "If vectors $v_1$ and $v_2$ are orthogonal and vectors $v_2$ and $v_3$ are orthogonal, then which of the following statement is true",
       "answers": {
-        "a": "<img src=./images/posttest/Q5/q5_op1.png></img>",
-        "b": "<img src=./images/posttest/Q5/q5_op2.png></img>",
-        "c": "<img src=./images/posttest/Q5/q5_op3.png></img>",
-        "d": "<img src=./images/posttest/Q5/q5_op4.png></img>"
+        "a": "$v_1$ and $v_3$ are always orthogonal",
+        "b": "$v_1$ and $v_3$ may not be orthogonal",
+        "c": "$v_2$ may not be orthogonal to $\\left(v_1+v_3\\right)$",
+        "d": "$v_1$ may not be orthogonal to $\\left(v_2+v_3\\right)$"
       },
       "explanations": {
-        "b": "<img src=./images/posttest/Q5/exp.png></img>"
+        "b": "Explanation for question 5"
       },
       "correctAnswer": "b",
-      "difficulty": "Advanced"
+      "difficulty": "Intermediate"
     }
   ]
 }
