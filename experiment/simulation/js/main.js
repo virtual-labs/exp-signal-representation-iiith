@@ -1298,6 +1298,12 @@ function orth(){
         }
     }
 
+    // Determine observation range based on periodicity.
+    // If either signal is sine (value 1) or cosine (value 2), then use "[-N, N]"; otherwise "[-∞, ∞]".
+    var isPeriodic = ((sel === 1 || sel === 2) || (sel1 === 1 || sel1 === 2));
+    var observationRange = isPeriodic ? "Observation Range: [-N, N]" : "Observation Range: [-∞, ∞]";
+
+
     var trace1 = {
         x: xValues,
         y: yValuesPos,
@@ -1345,6 +1351,13 @@ function orth(){
     }
 
     Plotly.relayout('figure5', update);
+        // Also update the static observation label in the Orth tab.
+        document.getElementById("obsLabel").innerHTML = isPeriodic 
+        ? " \\( \\int_{-N}^{N} x_{1}(t) x_{2}(t) dt = \\) " 
+        : " \\( \\int_{-\\infty}^{\\infty} x_{1}(t) x_{2}(t) dt = \\) ";
+    
+    // Trigger re-rendering math if using KaTeX.
+    renderMathInElement(document.body);
 }
 
 function makeArr(startValue, stopValue, cardinality) {
