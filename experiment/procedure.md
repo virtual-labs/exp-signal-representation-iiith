@@ -15,7 +15,7 @@ The parameters mentioned as "Parameter 1" and "Parameter 2" for the signals corr
 | Signal     |Parameter 1                   |Parameter 2                      |  Signal      |
 |----------------|-------------------------------|-----------------------------|--------------------|
 |Sine|Frequency            |Amplitude            | x(t) = \( A \texttt{sin}(2\pi ft) \) |
-|Cosine|Frequency|Amplitude| x(t) = \( A \texttt{sin}(2\pi ft) \) |
+|Cosine|Frequency|Amplitude| x(t) = \( A \texttt{cos}(2\pi ft) \) |
 |Ramp|-|Amplitude| x(t) = At |
 |Pulse|-|Amplitude| x(t) = A \( \mathcal{I}_{[-\frac{2}{3},\frac{2}{3}]} \) |
 |Haar|Scale Parameter|Amplitude| x(t) = A \( \mathcal{I}_{[-2,-2+\frac{1}{2^{s-1}}]} - \mathcal{I}_{[-2+\frac{1}{2^{s-1}},-2+\frac{1}{2^{s-2}}]} \) |
