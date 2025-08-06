@@ -1,6 +1,6 @@
 ### Procedure
 
-  
+
 
 #### Signal Plot
 
@@ -15,7 +15,7 @@ The parameters mentioned as "Parameter 1" and "Parameter 2" for the signals corr
 | Signal     |Parameter 1                   |Parameter 2                      |  Signal      |
 |----------------|-------------------------------|-----------------------------|--------------------|
 |Sine|Frequency            |Amplitude            | x(t) = \( A \texttt{sin}(2\pi ft) \) |
-|Cosine|Frequency|Amplitude| x(t) = \( A \texttt{sin}(2\pi ft) \) |
+|Cosine|Frequency|Amplitude| x(t) = \( A \texttt{cos}(2\pi ft) \) |
 |Ramp|-|Amplitude| x(t) = At |
 |Pulse|-|Amplitude| x(t) = A \( \mathcal{I}_{[-\frac{2}{3},\frac{2}{3}]} \) |
 |Haar|Scale Parameter|Amplitude| x(t) = A \( \mathcal{I}_{[-2,-2+\frac{1}{2^{s-1}}]} - \mathcal{I}_{[-2+\frac{1}{2^{s-1}},-2+\frac{1}{2^{s-2}}]} \) |
@@ -48,7 +48,7 @@ The plot is obtained and it represents the two selected signals with the specifi
 
 #### Real Sinusoids
 
-This section requires selection of two real sinusoidal signals (sine or cosine) and tweaking of a scale parameter of the signals to visualize how their product and orthogonality changes with the change in parameters. The objective of this section is to visualize the product of two real sinusoids and comment on their orthogonality. Click on the "**Plot**" button to visualize the plots. Steps to be done are as follows 
+This section requires selection of two real sinusoidal signals (sine or cosine) and tweaking of a scale parameter of the signals to visualize how their product and orthogonality changes with the change in parameters. The objective of this section is to visualize the product of two real sinusoids and comment on their orthogonality. Click on the "**Plot**" button to visualize the plots. Steps to be done are as follows
 
 1. Select the first signal in the drop down provided
 2. Enter Parameter k
@@ -56,7 +56,7 @@ This section requires selection of two real sinusoidal signals (sine or cosine) 
 4. Enter Parameter k
 5. Click on Plot button to visualize the plot in the figure
 
-The plot is obtained and it represents the product of the two selected signals with the specified parameters. The areas are shaded using different colors. The areas above the x-axis (positive integrals) are shaded with one color (here, orange) and the areas below the x-axis (negative integrals) are shaded with another color (here, blue). 
+The plot is obtained and it represents the product of the two selected signals with the specified parameters. The areas are shaded using different colors. The areas above the x-axis (positive integrals) are shaded with one color (here, orange) and the areas below the x-axis (negative integrals) are shaded with another color (here, blue).
 
 This coloring helps visualize the areas (integrals) that cancel each other out during a complete integration, which may result in a 0 integral or not, which determines the orthogonality between the signals.
 
@@ -65,12 +65,12 @@ The observartions tab at the bottom shows the integral of the prooduct of the si
 #### Complex Sinusoids
 
 This section comprises of two complex sinusoidal signals (complex exponential) and tweaking of a scale parameter of the signals to visualize how their product and orthogonality changes with the change in parameters. The objective of this section is to visualize the product of two complex sinusoids and comment on their orthogonality. Click on the "**Plot**" button to visualize the plots. Steps to be done are as follows
-  
+
 1. Enter Parameter k for the first signal
 2. Enter Parameter k for the second signal
 3. Click on Plot button to visualize the plot in the figure
 
-The plot is obtained and it represents the product of two complex exponentials with the specified parameters. The figure is divided into 2 subplots. The first one represents the real part of the signal and the second part represents the imaginery part of the signal. The areas are shaded using different colors. The areas above the x-axis (positive integrals) are shaded with one color and the areas below the x-axis (negative integrals) are shaded with another color. 
+The plot is obtained and it represents the product of two complex exponentials with the specified parameters. The figure is divided into 2 subplots. The first one represents the real part of the signal and the second part represents the imaginery part of the signal. The areas are shaded using different colors. The areas above the x-axis (positive integrals) are shaded with one color and the areas below the x-axis (negative integrals) are shaded with another color.
 
 This coloring helps visualize the areas (integrals) that cancel each other out during a complete integration, which may result in a 0 integral or not, which determines the orthogonality between the signals.
 
@@ -79,12 +79,12 @@ The observartions tab at the bottom shows the integral of the prooduct of the si
 #### Haar Wavelet
 
 This section comprises of two Haar wavelets and tweaking of a scale parameter of the wavelets to visualize how their product and orthogonality changes with the change in parameters. The objective of this section is to visualize the product of two Haar wavelets and comment on their orthogonality. Click on the "**Plot**" button to visualize the plots. Steps to be done are as follows
-  
+
 1. Select the Parameter k for the first signal from the drop down
 2. Select the Parameter k for the second signal from the drop down
 3. Click on Plot button to visualize the plot in the figure
 
-The plot is obtained and it represents the product of two Haar wavelets with the specified parameters. The areas are shaded using different colors. The areas above the x-axis (positive integrals) are shaded with one color (here, orange) and the areas below the x-axis (negative integrals) are shaded with another color (here, blue). 
+The plot is obtained and it represents the product of two Haar wavelets with the specified parameters. The areas are shaded using different colors. The areas above the x-axis (positive integrals) are shaded with one color (here, orange) and the areas below the x-axis (negative integrals) are shaded with another color (here, blue).
 
 This coloring helps visualize the areas (integrals) that cancel each other out during a complete integration, which may result in a 0 integral or not, which determines the orthogonality between the signals.
 
@@ -93,14 +93,14 @@ The observartions tab at the bottom shows the integral of the prooduct of the si
 #### Orthogonality Test
 
 This section comprises of two signals to be selected and tweaking of a scale parameter of the wavelets to visualize how their product and orthogonality changes with the change in parameters. The objective of this section is to visualize the product of any two selected signals and comment on their orthogonality. Click on the "**Plot**" button to visualize the plots. Steps to be done are as follows
-  
+
 1. Select the first signal in the drop down provided
 2. Enter Parameters as necessary
 3. Select the second signal in the drop down provided
 4. Enter Parameters as necessary
 5. Click on Plot button to visualize the plot in the figure
 
-The plot is obtained and it represents the product of the two selected signals with the specified parameters. The areas are shaded using different colors. The areas above the x-axis (positive integrals) are shaded with one color and the areas below the x-axis (negative integrals) are shaded with another color. 
+The plot is obtained and it represents the product of the two selected signals with the specified parameters. The areas are shaded using different colors. The areas above the x-axis (positive integrals) are shaded with one color and the areas below the x-axis (negative integrals) are shaded with another color.
 
 This coloring helps visualize the areas (integrals) that cancel each other out during a complete integration, which may result in a 0 integral or not, which determines the orthogonality between the signals.
 
