@@ -43,15 +43,13 @@
 						<br>
 						<h3> <b> Follow these steps: </b> </h3>
 						<br>
-						<h3> 
+						<h3>
 							<ol>
 								<li> Choose a signal from the drop-down menu </li>
 								<li> Enter any necessary parameter(s) </li>
 								<li> Click the "Plot" button to view the plot in the figure </li>
 							</ol>
 						</h3>
-						<br>
-						<h3> The "Parameter 1" and "Parameter 2" for the signals correspond to the following listed parameters: </h3>
 						<br>
 						<h3>
 							<table style="width:100%">
@@ -115,7 +113,7 @@
 				</div>
 			</div>
 
-			<div class="columns is-left is-flex-direction-row is-flex-wrap-wrap is-align-content-start" 
+			<div class="columns is-left is-flex-direction-row is-flex-wrap-wrap is-align-content-start"
 			style="margin-top:-1.5%">
 			<div class="column is-4-desktop is-8-tablet is-6-mobile">
 				<div class="box-question">
@@ -129,10 +127,10 @@
 						  <option value="6">Complex Exponential</option>
 						</select>
 					</div>
-                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre" value=1 step=1> </div>
-					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp" value=1 step=1> </div>
+                    <div class="fill">  &emsp; <input type=number id="fre" value=1 step=1> </div>
+					<div class="fill">  &emsp; <input type=number id="amp" value=1 step=1> </div>
 					<button class="buttonTotal" id="jsbutton" role="button" onClick="sig()">Plot</button>
-					
+
 				</div>
 			</div>
 
@@ -161,7 +159,7 @@
 						<br>
 						<h3> <b> Follow these steps: </b> </h3>
 						<br>
-						<h3> 
+						<h3>
 							<ol>
 								<li> Choose the first signal from the dropdown menu </li>
 								<li> Enter the necessary parameter(s) for the first signal </li>
@@ -170,8 +168,6 @@
 								<li> Click the "Plot" button to view the plot in the figure </li>
 							</ol>
 						</h3>
-						<br>
-						<h3> The "Parameter 1" and "Parameter 2" for the signals correspond to the following listed parameters: </h3>
 						<br>
 						<h3>
 							<table style="width:100%">
@@ -250,8 +246,8 @@
 						  <option value="6">Complex Exponential</option>
 						</select>
 					</div>
-                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre1" value=1 step=1> </div>
-					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp1" value=1 step=1> </div>
+                    <div class="fill"> &emsp; <input type=number id="fre1" value=1 step=1> </div>
+					<div class="fill"> &emsp; <input type=number id="amp1" value=1 step=1> </div>
 					<div class="box">
 						<select id="sig-names2">
 						  <option value="1">Sine</option>
@@ -262,8 +258,8 @@
 						  <option value="6">Complex Exponential</option>
 						</select>
 					</div>
-                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre2" value=1 step=1> </div>
-					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp2" value=1 step=1> </div>
+                    <div class="fill"> &emsp; <input type=number id="fre2" value=1 step=1> </div>
+					<div class="fill"> &emsp; <input type=number id="amp2" value=1 step=1> </div>
 					<button class="buttonTotal" id="jsbuttonTotal" role="button" onClick="prod()">Plot</button>
 				</div>
 			</div>
@@ -295,12 +291,12 @@
 							x(t) = \( A\ \texttt{cos}(\frac{2\pi kt}{N}) \)
 							or
 							x(t) = \( A\ \texttt{sin}(\frac{2\pi kt}{N}) \)
-							with A = 1 and N = 8. 
+							with A = 1 and N = 8.
 						</h3>
 						<br>
 						<h3> <b> Follow these steps: </b> </h3>
 						<br>
-						<h3> 
+						<h3>
 							<ol>
 								<li> Choose the first signal from the dropdown menu </li>
 								<li> Choose harmonic k for the first signal </li>
@@ -312,7 +308,7 @@
 						<br>
 						<h3> The resulting plot shows the product of the two signals with the selected parameters. The shaded areas above the x-axis (positive integrals) and below the x-axis (negative integrals) use different colors to indicate which areas cancel out during a complete integration, determining the orthogonality between the signals. </h3>
 						<br>
-						<h3> <b> The observations tab at the bottom displays the integral of the product of the signals. If the value is zero, the signals are orthogonal. If the value is non-zero, the signals are not orthogonal. </b> </h3>	
+						<h3> <b> The observations tab at the bottom displays the integral of the product of the signals. If the value is zero, the signals are orthogonal. If the value is non-zero, the signals are not orthogonal. </b> </h3>
 					</div>
 				</div>
 			</div>
@@ -353,14 +349,14 @@
 				<div class="v-datalist-container components-list" style="margin-top: 10%; margin-bottom: 25%;">
 					<div class="v-datalist-title">Observations</div>
 					<div class="v-datalist-row">
-						<h3> \( \int_{-N}^{N} x_{1}(t) x_{2}^{*}(t) dt = \) 
+						<h3> \( \int_{-N}^{N} x_{1}(t) x_{2}^{*}(t) dt = \)
 						</h3>
 						<div id="in1"></div>
 					</div>
 				</div>
 			</div>
 			</div>
-					
+
     </section>
 </div>
 
@@ -376,12 +372,12 @@
 						<br>
 						<h3> <b> The signal plotted is </b>
 							x(t) = \( A e^{\frac{2\pi kt}{N}} \)
-							with A = 1 and N = 8. 
+							with A = 1 and N = 8.
 						</h3>
 						<br>
 						<h3> <b> To visualize the product and comment on its orthogonality, follow these steps: </b> </h3>
 						<br>
-						<h3> 
+						<h3>
 							<ol>
 								<li> Enter the harmonic "k" for the first signal (between 0 and N-1) </li>
 								<li> Enter the harmonic "k" for the second signal (between 0 and N-1) </li>
@@ -422,14 +418,14 @@
 				<div class="v-datalist-container components-list" style="margin-top: 10%; margin-bottom: 25%;">
 					<div class="v-datalist-title">Observations</div>
 					<div class="v-datalist-row">
-						<h3> \( \int_{-N}^{N} x_{1}(t) x_{2}^{*}(t) dt = \) 
+						<h3> \( \int_{-N}^{N} x_{1}(t) x_{2}^{*}(t) dt = \)
 						</h3>
 						<div id="in2"></div>
 					</div>
 				</div>
 			</div>
 			</div>
-					
+
     </section>
 </div>
 
@@ -443,7 +439,7 @@
 					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
 						<h3> <b> To visualize the product and orthogonality of two Haar wavelets, follow these steps: </b> </h3>
 						<br>
-						<h3> 
+						<h3>
 							<ol>
 								<li> Enter the scale parameter "k" for the first signal </li>
 								<li> Enter the scale parameter "k" for the second signal </li>
@@ -497,7 +493,7 @@
 				<div class="v-datalist-container components-list" style="margin-top: 10%; margin-bottom: 25%;">
 					<div class="v-datalist-title">Observations</div>
 					<div class="v-datalist-row">
-						<h3> \( \int_{-N}^{N} x_{1}(t) x_{2}(t) dt = \) 
+						<h3> \( \int_{-N}^{N} x_{1}(t) x_{2}(t) dt = \)
 						</h3>
 						<div id="in3"></div>
 					</div>
@@ -518,15 +514,13 @@
 						<br>
 						<h3> <b> Follow these steps: </b> </h3>
 						<br>
-						<h3> 
+						<h3>
 							<ol>
 								<li> Choose a signal from the drop-down menu </li>
 								<li> Enter any necessary parameter(s) </li>
 								<li> Click the "Plot" button to view the plot in the figure </li>
 							</ol>
 						</h3>
-						<br>
-						<h3> The "Parameter 1" and "Parameter 2" for the signals correspond to the following listed parameters: </h3>
 						<br>
 						<h3>
 							<table style="width:100%">
@@ -604,8 +598,8 @@
 						  <option value="5">Haar</option>
 						</select>
 					</div>
-                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre3" value=1 step=1> </div>
-					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp3" value=1 step=1> </div>
+                    <div class="fill"> &emsp; <input type=number id="fre3" value=1 step=1> </div>
+					<div class="fill"> &emsp; <input type=number id="amp3" value=1 step=1> </div>
 					<div class="box">
 						<select id="sig-names8">
 						  <option value="1">Sine</option>
@@ -615,8 +609,8 @@
 						  <option value="5">Haar</option>
 						</select>
 					</div>
-                    <div class="fill"> Parameter 1: &emsp; <input type=number id="fre4" value=1 step=1> </div>
-					<div class="fill"> Parameter 2: &emsp; <input type=number id="amp4" value=1 step=1> </div>
+                    <div class="fill"> &emsp; <input type=number id="fre4" value=1 step=1> </div>
+					<div class="fill"> &emsp; <input type=number id="amp4" value=1 step=1> </div>
 					<button class="buttonTotal" id="jsbutton4" role="button" onClick="orth()">Plot</button>
 				</div>
 			</div>
@@ -640,8 +634,8 @@
 				</div>
 			</div>
 		</div>
-		
-				
+
+
     </section>
 </div>
 
