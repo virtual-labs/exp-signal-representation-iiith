@@ -64,7 +64,7 @@
 									<td>Frequency</td>
 									<td>Amplitude</td>
 									<td>
-										\( x(t) = A\ \texttt{sin}(\frac{2\pi kt}{N}) \)
+										\( x(t) = A\ \texttt{sin}(2\pi f t) \)
 									</td>
 								</tr>
 								<tr>
@@ -72,7 +72,7 @@
 									<td>Frequency</td>
 									<td>Amplitude</td>
 									<td>
-										\( x(t) = A\ \texttt{cos}(\frac{2\pi kt}{N}) \)
+										\( x(t) = A\ \texttt{cos}(2\pi f t) \)
 									</td>
 								</tr>
 								<tr>
@@ -96,7 +96,7 @@
 									<td>Scale Parameter</td>
 									<td>Amplitude</td>
 									<td>
-										\( x(t) = A\ \mathcal{I}_{[-2,-2+\frac{1}{2^{s-1}}]} - \mathcal{I}_{[-2+\frac{1}{2^{s-1}},-2+\frac{1}{2^{s-2}}]} \)
+										\( x(t) = A \cdot 2^{s/2} \cdot \psi(2^s t) \), where \( \psi(t) = \begin{cases} 1, & 0 \leq t < 0.5 \\ -1, & 0.5 \leq t < 1 \\ 0, & \text{otherwise} \end{cases} \)
 									</td>
 								</tr>
 								<tr>
@@ -182,7 +182,7 @@
 									<td>Frequency</td>
 									<td>Amplitude</td>
 									<td>
-										\( x(t) = A\ \texttt{sin}(\frac{2\pi kt}{N}) \)
+										\( x(t) = A\ \texttt{sin}(2\pi f t) \)
 									</td>
 								</tr>
 								<tr>
@@ -190,7 +190,7 @@
 									<td>Frequency</td>
 									<td>Amplitude</td>
 									<td>
-										\( x(t) = A\ \texttt{cos}(\frac{2\pi kt}{N}) \)
+										\( x(t) = A\ \texttt{cos}(2\pi f t) \)
 									</td>
 								</tr>
 								<tr>
@@ -214,7 +214,7 @@
 									<td>Scale Parameter</td>
 									<td>Amplitude</td>
 									<td>
-										\( x(t) = A\ \mathcal{I}_{[-2,-2+\frac{1}{2^{s-1}}]} - \mathcal{I}_{[-2+\frac{1}{2^{s-1}},-2+\frac{1}{2^{s-2}}]} \)
+										\( x(t) = A \cdot 2^{s/2} \cdot \psi(2^s t) \), where \( \psi(t) = \begin{cases} 1, & 0 \leq t < 0.5 \\ -1, & 0.5 \leq t < 1 \\ 0, & \text{otherwise} \end{cases} \)
 									</td>
 								</tr>
 								<tr>
@@ -285,14 +285,16 @@
 				<div class="v-collapsible-instruction-container v-instruction-container" style="width: 75%; margin-right: 11%; margin-bottom: 1%;">
 					<div class="v-collapsible is-size-5">Instructions</div>
 					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
-						<h3> In this section, you can select two real sinusoidal signals (sine or cosine) and adjust a scale parameter to observe how their product and orthogonality change with different parameters. The goal is to visualize the product of the two signals and determine their orthogonality. </h3>
+						<h3> In this section, you can select two real sinusoidal signals (sine or cosine) and adjust the harmonic parameter k to observe how their product and orthogonality change. The goal is to visualize the product of the two signals and determine their orthogonality. </h3>
 						<br>
-						<h3> <b> The signal plotted is </b>
-							x(t) = \( A\ \texttt{cos}(\frac{2\pi kt}{N}) \)
+						<h3> <b> The signals are of the form: </b>
+						x(t) = \( A\ \texttt{cos}(\frac{2\pi k t}{T}) \)
 							or
-							x(t) = \( A\ \texttt{sin}(\frac{2\pi kt}{N}) \)
-							with A = 1 and N = 8.
+							x(t) = \( A\ \texttt{sin}(\frac{2\pi k t}{T}) \)
+							with A = 1 and T = 8 (the period).
 						</h3>
+						<br>
+						<h3> <b> What is k? </b> k is the harmonic number — it determines how many complete cycles fit within one period T. For example, k = 1 gives the fundamental frequency (one cycle per period), k = 2 gives the second harmonic (two cycles per period), and so on. Signals with different harmonic numbers (k₁ ≠ k₂) of the same type (both sine or both cosine) are orthogonal to each other. </h3>
 						<br>
 						<h3> <b> Follow these steps: </b> </h3>
 						<br>
@@ -370,10 +372,12 @@
 					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
 						<h3> This section shows two complex sinusoidal signals and their product. </h3>
 						<br>
-						<h3> <b> The signal plotted is </b>
-							x(t) = \( A e^{\frac{2\pi kt}{N}} \)
-							with A = 1 and N = 8.
+						<h3> <b> The signals are of the form: </b>
+							x(t) = \( A e^{\frac{2\pi j k t}{N}} \)
+							with A = 1 and N = 8 (the period).
 						</h3>
+						<br>
+						<h3> <b> What is k? </b> k is the harmonic number — it determines the frequency of the complex exponential. Complex sinusoids with different harmonic numbers (k₁ ≠ k₂) are orthogonal to each other. The inner product equals N when k₁ = k₂ and 0 otherwise. </h3>
 						<br>
 						<h3> <b> To visualize the product and comment on its orthogonality, follow these steps: </b> </h3>
 						<br>
@@ -535,7 +539,7 @@
 									<td>Frequency</td>
 									<td>Amplitude</td>
 									<td>
-										\( x(t) = A\ \texttt{sin}(\frac{2\pi kt}{N}) \)
+										\( x(t) = A\ \texttt{sin}(2\pi f t) \)
 									</td>
 								</tr>
 								<tr>
@@ -543,7 +547,7 @@
 									<td>Frequency</td>
 									<td>Amplitude</td>
 									<td>
-										\( x(t) = A\ \texttt{cos}(\frac{2\pi kt}{N}) \)
+										\( x(t) = A\ \texttt{cos}(2\pi f t) \)
 									</td>
 								</tr>
 								<tr>
@@ -567,7 +571,7 @@
 									<td>Scale Parameter</td>
 									<td>Amplitude</td>
 									<td>
-										\( x(t) = A\ \mathcal{I}_{[-2,-2+\frac{1}{2^{s-1}}]} - \mathcal{I}_{[-2+\frac{1}{2^{s-1}},-2+\frac{1}{2^{s-2}}]} \)
+										\( x(t) = A \cdot 2^{s/2} \cdot \psi(2^s t) \), where \( \psi(t) = \begin{cases} 1, & 0 \leq t < 0.5 \\ -1, & 0.5 \leq t < 1 \\ 0, & \text{otherwise} \end{cases} \)
 									</td>
 								</tr>
 								<tr>

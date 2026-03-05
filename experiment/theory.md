@@ -9,7 +9,7 @@ In the Cartesian coordinate system, the unit vectors $ \mathbf{i}, \mathbf{j}, $
 
 $$ \langle\mathbf{v}_1,\mathbf{v}_2\rangle = \mathbf{v}_1 \cdot \mathbf{v}_2 = a_1a_2 + b_1b_2 + c_1c_2 $$
 
-By this definition, we can see that any two vectors from the set $ [\mathbf{i}, \mathbf{j}, \mathbf{k}] $  have zero dot product. In general, any two perpendicular vectors will have zero dot product and are said to be orthogonal to each other. Additionally, when orthogonal unit vectors are used as basis to represent vectors, the coefficients can be easily found. For example, when $ [\mathbf{i}, \mathbf{j}, \mathbf{k}] $  are used as basis,  
+By this definition, we can see that any two vectors from the set $ \{mathbf{i}, \mathbf{j}, \mathbf{k}\} $  have zero dot product. In general, any two perpendicular vectors will have zero dot product and are said to be orthogonal to each other. Additionally, when orthogonal unit vectors are used as basis to represent vectors, the coefficients can be easily found. For example, when $ [\mathbf{i}, \mathbf{j}, \mathbf{k}] $  are used as basis,  
 
 $$ a = \mathbf{v} \cdot \mathbf{i},  \quad b = \mathbf{v} \cdot \mathbf{j}, \quad c = \mathbf{v} \cdot \mathbf{k} $$
  
@@ -84,4 +84,4 @@ $$ a_k ~= \frac{1}{\pi} \int_{-\pi}^{\pi} \mathbf{x}(t) \cos(kt)~ dt $$
 
 $$ b_k ~= \frac{1}{\pi} \int_{-\pi}^{\pi} \mathbf{x}(t) \sin(kt)~ dt $$
 
-Coefficients in other signal representations can be obtained in a similar way.  
+Coefficients in other signal representations can be obtained in a similar way.

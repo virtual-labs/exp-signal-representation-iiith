@@ -80,11 +80,11 @@ function updateParameterLabels() {
   span2.textContent = param2Text + ": ";
   param2Div.insertBefore(span2, param2Div.firstChild);
 
-  // Hide/show input for param1 if not needed
+  // Hide/show entire div for param1 if not needed
   if (param1Text === "-") {
-    document.getElementById("fre").style.display = "none";
+    param1Div.style.display = "none";
   } else {
-    document.getElementById("fre").style.display = "";
+    param1Div.style.display = "";
   }
 }
 
@@ -129,9 +129,9 @@ function updateProductParameterLabels() {
   span2a.textContent = param2Text1 + ": ";
   param2Div1.insertBefore(span2a, param2Div1.firstChild);
   if (param1Text1 === "-") {
-    document.getElementById("fre1").style.display = "none";
+    param1Div1.style.display = "none";
   } else {
-    document.getElementById("fre1").style.display = "";
+    param1Div1.style.display = "";
   }
 
   // Second signal
@@ -173,9 +173,9 @@ function updateProductParameterLabels() {
   span2b.textContent = param2Text2 + ": ";
   param2Div2.insertBefore(span2b, param2Div2.firstChild);
   if (param1Text2 === "-") {
-    document.getElementById("fre2").style.display = "none";
+    param1Div2.style.display = "none";
   } else {
-    document.getElementById("fre2").style.display = "";
+    param1Div2.style.display = "";
   }
 }
 
@@ -219,9 +219,9 @@ function updateOrthParameterLabels() {
   span2a.textContent = param2Text1 + ": ";
   param2Div1.insertBefore(span2a, param2Div1.firstChild);
   if (param1Text1 === "-") {
-    document.getElementById("fre3").style.display = "none";
+    param1Div1.style.display = "none";
   } else {
-    document.getElementById("fre3").style.display = "";
+    param1Div1.style.display = "";
   }
 
   // Second signal
@@ -262,9 +262,9 @@ function updateOrthParameterLabels() {
   span2b.textContent = param2Text2 + ": ";
   param2Div2.insertBefore(span2b, param2Div2.firstChild);
   if (param1Text2 === "-") {
-    document.getElementById("fre4").style.display = "none";
+    param1Div2.style.display = "none";
   } else {
-    document.getElementById("fre4").style.display = "";
+    param1Div2.style.display = "";
   }
 }
 
@@ -273,17 +273,26 @@ window.addEventListener("DOMContentLoaded", function () {
   // Signal tab
   var sigNames = document.getElementById("sig-names");
   if (sigNames) {
-    sigNames.addEventListener("change", updateParameterLabels);
+    sigNames.addEventListener("change", function() {
+      updateParameterLabels();
+      sig();  // Re-plot when signal changes
+    });
     updateParameterLabels(); // Initial call
   }
   // Product tab
   var sigNames1 = document.getElementById("sig-names1");
   var sigNames2 = document.getElementById("sig-names2");
   if (sigNames1) {
-    sigNames1.addEventListener("change", updateProductParameterLabels);
+    sigNames1.addEventListener("change", function() {
+      updateProductParameterLabels();
+      prod();  // Re-plot when first signal changes
+    });
   }
   if (sigNames2) {
-    sigNames2.addEventListener("change", updateProductParameterLabels);
+    sigNames2.addEventListener("change", function() {
+      updateProductParameterLabels();
+      prod();  // Re-plot when second signal changes
+    });
   }
   updateProductParameterLabels();
 
@@ -291,17 +300,104 @@ window.addEventListener("DOMContentLoaded", function () {
   var sigNames7 = document.getElementById("sig-names7");
   var sigNames8 = document.getElementById("sig-names8");
   if (sigNames7) {
-    sigNames7.addEventListener("change", updateOrthParameterLabels);
+    sigNames7.addEventListener("change", function() {
+      updateOrthParameterLabels();
+      orth();  // Re-plot when first signal changes
+    });
   }
   if (sigNames8) {
-    sigNames8.addEventListener("change", updateOrthParameterLabels);
+    sigNames8.addEventListener("change", function() {
+      updateOrthParameterLabels();
+      orth();  // Re-plot when second signal changes
+    });
   }
   updateOrthParameterLabels();
+
+  // Haar Wavelet orthogonality tab
+  var sigNames5 = document.getElementById("sig-names5");
+  var sigNames6 = document.getElementById("sig-names6");
+  if (sigNames5) {
+    sigNames5.addEventListener("change", function() {
+      har();  // Re-plot when first wavelet scale changes
+    });
+  }
+  if (sigNames6) {
+    sigNames6.addEventListener("change", function() {
+      har();  // Re-plot when second wavelet scale changes
+    });
+  }
+
+  // Also add listeners for frequency/amplitude input changes in Signal tab
+  var freInput = document.getElementById("fre");
+  var ampInput = document.getElementById("amp");
+  if (freInput) {
+    freInput.addEventListener("change", function() {
+      sig();
+    });
+  }
+  if (ampInput) {
+    ampInput.addEventListener("change", function() {
+      sig();
+    });
+  }
+
+  // Frequency/amplitude for Product tab
+  var fre1Input = document.getElementById("fre1");
+  var amp1Input = document.getElementById("amp1");
+  var fre2Input = document.getElementById("fre2");
+  var amp2Input = document.getElementById("amp2");
+  if (fre1Input) {
+    fre1Input.addEventListener("change", function() {
+      prod();
+    });
+  }
+  if (amp1Input) {
+    amp1Input.addEventListener("change", function() {
+      prod();
+    });
+  }
+  if (fre2Input) {
+    fre2Input.addEventListener("change", function() {
+      prod();
+    });
+  }
+  if (amp2Input) {
+    amp2Input.addEventListener("change", function() {
+      prod();
+    });
+  }
+
+  // Frequency/amplitude for Orthogonality tab
+  var fre3Input = document.getElementById("fre3");
+  var amp3Input = document.getElementById("amp3");
+  var fre4Input = document.getElementById("fre4");
+  var amp4Input = document.getElementById("amp4");
+  if (fre3Input) {
+    fre3Input.addEventListener("change", function() {
+      orth();
+    });
+  }
+  if (amp3Input) {
+    amp3Input.addEventListener("change", function() {
+      orth();
+    });
+  }
+  if (fre4Input) {
+    fre4Input.addEventListener("change", function() {
+      orth();
+    });
+  }
+  if (amp4Input) {
+    amp4Input.addEventListener("change", function() {
+      orth();
+    });
+  }
 });
 
 // ------------------------------------------ Signal Plotting ----------------------------------------------------------
 
 function sig() {
+  // console.log("Plotting signal with updated parameters...");
   var sel = document.getElementById("sig-names").value;
   sel = parseFloat(sel);
   freq = document.getElementById("fre").value;
@@ -340,19 +436,29 @@ function sig() {
       }
     }
   } else if (sel == 5) {
+    // Haar wavelet: psi_{n,0}(t) = 2^(n/2) * psi(2^n * t - k)
+    // where psi(t) = 1 for 0 <= t < 0.5, -1 for 0.5 <= t < 1, 0 otherwise
+    // For k=0, centered at origin on [-2, 2]
+    // scale parameter s = 2^n, so n = log2(s)
+    var n = Math.log2(freq);  // freq is the scale parameter (1, 2, 4, 8)
+    var amplitude = am * Math.pow(2, n/2);  // 2^(n/2) scaling
+    var halfWidth = 1 / Math.pow(2, n + 1);  // Support is [-1/2^(n+1), 1/2^(n+1))
+
     var xValues = makeArr(-2, 2, 1000);
+    // console.log(xValues[0], xValues[999]);
     var yValues = [];
     for (var i = 0; i < 1000; i++) {
-      if (i < parseFloat(500 / Math.pow(2, freq))) {
-        yValues.push(am);
-      } else if (i < parseFloat(1000 / Math.pow(2, freq))) {
-        yValues.push(-am);
+      var x = xValues[i];
+      if (x >= 0 && x < halfWidth) {
+        yValues.push(amplitude);  // Positive half [0, halfWidth)
+      } else if (x >= halfWidth && x <= 2*halfWidth) {
+        yValues.push(-amplitude);  // Negative half [-halfWidth, 0)
       } else {
-        yValues.push(0);
+        yValues.push(0);  // Outside support
       }
     }
   } else {
-    var xValues = makeArr(-2, 2, 1000);
+    var xValues = makeArr(-2 * Math.PI, 2 * Math.PI, 1000);
     var yReal = [];
     var yImag = [];
     for (var i = 0; i < 1000; i++) {
@@ -522,15 +628,24 @@ function prod() {
       }
     }
   } else if (sel == 5) {
+    // Haar wavelet: psi_{n,0}(t) = 2^(n/2) * psi(2^n * t - k)
+    // where psi(t) = 1 for 0 <= t < 0.5, -1 for 0.5 <= t < 1, 0 otherwise
+    // For k=0, centered at origin on [-2, 2]
+    // scale parameter s = 2^n, so n = log2(s)
+    var n = Math.log2(freq);  // freq is the scale parameter (1, 2, 4, 8)
+    var amplitude = am * Math.pow(2, n/2);  // 2^(n/2) scaling
+    var halfWidth = 1 / Math.pow(2, n + 1);  // Support is [-1/2^(n+1), 1/2^(n+1))
+
     var xValues = makeArr(-2, 2, 1000);
     var yValues = [];
     for (var i = 0; i < 1000; i++) {
-      if (i < parseFloat(500 / Math.pow(2, freq))) {
-        yValues.push(am);
-      } else if (i < parseFloat(1000 / Math.pow(2, freq))) {
-        yValues.push(-am);
+      var x = xValues[i];
+      if (x >= 0 && x < halfWidth) {
+        yValues.push(amplitude);  // Positive half [0, halfWidth)
+      } else if (x >= halfWidth && x <= 2*halfWidth) {
+        yValues.push(-amplitude);  // Negative half [-halfWidth, 0)
       } else {
-        yValues.push(0);
+        yValues.push(0);  // Outside support
       }
     }
   } else {
@@ -581,15 +696,32 @@ function prod() {
       }
     }
   } else if (sel1 == 5) {
+    // var xValues1 = makeArr(-2, 2, 1000);
+    // var yValues1 = [];
+    // for (var i = 0; i < 1000; i++) {
+    //   if (i < parseFloat(500 / Math.pow(2, freq1))) {
+    //     yValues1.push(am1);
+    //   } else if (i < parseFloat(1000 / Math.pow(2, freq1))) {
+    //     yValues1.push(-am1);
+    //   } else {
+    //     yValues1.push(0);
+    //   }
+    // }
+
+    var n = Math.log2(freq1);  // freq is the scale parameter (1, 2, 4, 8)
+    var amplitude = am1 * Math.pow(2, n/2);  // 2^(n/2) scaling
+    var halfWidth = 1 / Math.pow(2, n + 1);  // Support is [-1/2^(n+1), 1/2^(n+1))
+
     var xValues1 = makeArr(-2, 2, 1000);
     var yValues1 = [];
     for (var i = 0; i < 1000; i++) {
-      if (i < parseFloat(500 / Math.pow(2, freq1))) {
-        yValues1.push(am1);
-      } else if (i < parseFloat(1000 / Math.pow(2, freq1))) {
-        yValues1.push(-am1);
+      var x = xValues1[i];
+      if (x >= 0 && x < halfWidth) {
+        yValues1.push(amplitude);  // Positive half [0, halfWidth)
+      } else if (x >= halfWidth && x <= 2*halfWidth) {
+        yValues1.push(-amplitude);  // Negative half [-halfWidth, 0)
       } else {
-        yValues1.push(0);
+        yValues1.push(0);  // Outside support
       }
     }
   } else {
@@ -597,8 +729,8 @@ function prod() {
     var yReal1 = [];
     var yImag1 = [];
     for (var i = 0; i < 1000; i++) {
-      yReal1.push(am * Math.cos(freq * xValues[i]));
-      yImag1.push(am * Math.sin(freq * xValues[i]));
+      yReal1.push(am1 * Math.cos(freq1 * xValues1[i]));
+      yImag1.push(am1 * Math.sin(freq1 * xValues1[i]));
     }
   }
 
@@ -1086,24 +1218,37 @@ function har() {
 
   var am1 = 1;
 
+  // Haar wavelet: psi_{n,0}(t) = 2^(n/2) * psi(2^n * t)
+  // scale parameter s = 2^n, so n = log2(s)
+  var n1 = Math.log2(sig5);
+  var n2 = Math.log2(sig6);
+
   var xValues = makeArr(-2, 2, 1000);
   var yValues1 = [];
+  var halfWidth1 = 1 / Math.pow(2, n1 + 1);
+  var amplitude1 = am1 * Math.pow(2, n1/2);
+
   for (var i = 0; i < 1000; i++) {
-    if (i < parseFloat(500 / sig5)) {
-      yValues1.push(am1);
-    } else if (i < parseFloat(1000 / sig5)) {
-      yValues1.push(-am1);
+    var x = xValues[i];
+    if (x >= 0 && x < halfWidth1) {
+      yValues1.push(amplitude1);  // Positive half [0, halfWidth)
+    } else if (x >= halfWidth1 && x <= halfWidth1 * 2) {
+      yValues1.push(-amplitude1);  // Negative half [-halfWidth, 0)
     } else {
       yValues1.push(0);
     }
   }
 
   var yValues2 = [];
+  var halfWidth2 = 1 / Math.pow(2, n2 + 1);
+  var amplitude2 = am1 * Math.pow(2, n2/2);
+
   for (var i = 0; i < 1000; i++) {
-    if (i < parseFloat(500 / sig6)) {
-      yValues2.push(am1);
-    } else if (i < parseFloat(1000 / sig6)) {
-      yValues2.push(-am1);
+    var x = xValues[i];
+    if (x >= 0 && x < halfWidth2) {
+      yValues2.push(amplitude2);  // Positive half [0, halfWidth)
+    } else if (x >= halfWidth2 && x <= 2*halfWidth2) {
+      yValues2.push(-amplitude2);  // Negative half [-halfWidth, 0)
     } else {
       yValues2.push(0);
     }
@@ -1233,13 +1378,19 @@ function orth() {
       }
     }
   } else {
-    //var xValues = makeArr(-2,2,1000);
+    // Haar wavelet: psi_{n,0}(t) = 2^(n/2) * psi(2^n * t)
+    // scale parameter s = 2^n, so n = log2(s)
+    var n = Math.log2(freq);
+    var amplitude = am * Math.pow(2, n/2);
+    var halfWidth = 1 / Math.pow(2, n + 1);
+
     var yValues = [];
     for (var i = 0; i < 1000; i++) {
-      if (i < parseFloat(500 / Math.pow(2, freq))) {
-        yValues.push(am);
-      } else if (i < parseFloat(1000 / Math.pow(2, freq))) {
-        yValues.push(-am);
+      var x = xValues[i];
+      if (x >= 0 && x < halfWidth) {
+        yValues.push(amplitude);  // Positive half [0, halfWidth)
+      } else if (x >= halfWidth && x <= 2*halfWidth) {
+        yValues.push(-amplitude);  // Negative half [-halfWidth, 0)
       } else {
         yValues.push(0);
       }
@@ -1286,13 +1437,19 @@ function orth() {
       }
     }
   } else {
-    //var xValues1 = makeArr(-2,2,1000);
+    // Haar wavelet: psi_{n,0}(t) = 2^(n/2) * psi(2^n * t)
+    // scale parameter s = 2^n, so n = log2(s)
+    var n1 = Math.log2(freq1);
+    var amplitude1 = am1 * Math.pow(2, n1/2);
+    var halfWidth1 = 1 / Math.pow(2, n1 + 1);
+
     var yValues1 = [];
     for (var i = 0; i < 1000; i++) {
-      if (i < parseFloat(500 / Math.pow(2, freq1))) {
-        yValues1.push(am1);
-      } else if (i < parseFloat(1000 / Math.pow(2, freq1))) {
-        yValues1.push(-am1);
+      var x = xValues1[i];
+      if (x >= 0 && x < halfWidth1) {
+        yValues1.push(amplitude1);  // Positive half [0, halfWidth)
+      } else if (x >= halfWidth1 && x <= 2*halfWidth1) {
+        yValues1.push(-amplitude1);  // Negative half [-halfWidth, 0)
       } else {
         yValues1.push(0);
       }
