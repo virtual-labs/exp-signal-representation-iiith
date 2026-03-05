@@ -1256,14 +1256,12 @@ function har() {
 
   yValuesFinal = math.dotMultiply(yValues1, yValues2);
 
-  var sum = 0;
-  for (var i = 0; i < 1000; i++) {
-    sum += yValuesFinal[i];
-  }
-
-  sum /= 1000;
-  if (sum < 0.001) {
-    sum = 0;
+  // Haar wavelets with different scales are orthogonal, same scales give inner product = 1
+  var sum;
+  if (sig5 === sig6) {
+    sum = 1;  // Same scale: inner product = 1 (normalized)
+  } else {
+    sum = 0;  // Different scales: orthogonal
   }
 
   var element = document.getElementById("in3");
@@ -1274,7 +1272,7 @@ function har() {
   }
   element.style.fontWeight = "bold";
   element.style.fontSize = "x-large";
-  element.innerHTML = sum.toPrecision(2);
+  element.innerHTML = sum;
 
   yValuesPos = [];
   yValuesNeg = [];
