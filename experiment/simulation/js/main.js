@@ -991,7 +991,7 @@ function sine() {
   var config = { responsive: true };
 
   var layout = {
-    title: "Orthogonality of Real Sinusoids",
+    title: "Product of Real Sinusoids",
     showlegend: false,
     xaxis: {
       title: "Time (t)",
@@ -1123,7 +1123,7 @@ function four() {
   var config = { responsive: true };
 
   var layout = {
-    title: "Orthogonality of Complex Sinusoids",
+    title: "Product of Complex Sinusoids",
     showlegend: false,
     grid: { rows: 1, columns: 2, pattern: "independent" },
     xaxis: {
@@ -1306,7 +1306,7 @@ function har() {
   var config = { responsive: true };
 
   var layout = {
-    title: "Orthogonality of Haar Wavelets",
+    title: "Product of Haar Wavelets",
     showlegend: false,
     xaxis: {
       title: "Time (t)",
