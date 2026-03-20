@@ -38,7 +38,7 @@
         "d": "(a) and (b)"
       },
       "explanations": {
-        "d": "Both $x_1(t)$ and $x_2(t)$ are orthogonal because $\\int_0^1 \\psi(t)\\cos(2\\pi t)dt = 0$, and $x_1(t)$ and $x_3(t)$ are orthogonal because $\\int_0^1 \\psi(t)\\psi(2t)dt = 0$ due to their different frequency components."
+        "d": "Both $x_1(t)$ and $x_2(t)$ are orthogonal because $\\int_0^1 \\psi(t)\\cos(2\\pi t)dt = 0$, and $x_1(t)$ and $x_3(t)$ are orthogonal because $\\int_0^1 \\psi(t)\\psi(2t)dt = 0$."
       },
       "correctAnswer": "d",
       "difficulty": "Intermediate"
@@ -60,15 +60,15 @@
     {
       "question": "If vectors $v_1$ and $v_2$ are orthogonal and vectors $v_2$ and $v_3$ are orthogonal, then which of the following statement is true",
       "answers": {
-        "a": "$v_1$ and $v_3$ are always orthogonal",
-        "b": "$v_1$ and $v_3$ may not be orthogonal",
-        "c": "$v_2$ may not be orthogonal to $\\left(v_1+v_3\\right)$",
-        "d": "$v_1$ may not be orthogonal to $\\left(v_2+v_3\\right)$"
+        "a": "$v_2$ is orthogonal to $\\left(v_1+v_3\\right)$",
+        "b": "$v_2$ is orthogonal to $\\left(v_1-v_3\\right)$",
+        "c": "$v_2$ is orthogonal to $\\left(v_3-v_1\\right)$",
+        "d": "(a) and (b)"
       },
       "explanations": {
-        "b": "While $v_1 \\perp v_2$ and $v_2 \\perp v_3$, orthogonality is not a transitive property. Consider vectors in $\\mathbb{R}^3$: $v_1=[1,0,0]$, $v_2=[0,1,0]$, and $v_3=[1,0,1]$. Here $v_1 \\perp v_2$ and $v_2 \\perp v_3$, but $v_1 \\cdot v_3 \\neq 0$."
+        "d": "Since $v_2$ is orthogonal to both $v_1$ and $v_3$, it will be orthogonal to any linear combination of $v_2$ and $v_3$."
       },
-      "correctAnswer": "b",
+      "correctAnswer": "d",
       "difficulty": "Intermediate"
     }
   ]
