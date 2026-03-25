@@ -10,13 +10,13 @@ This section requires selection of signal and tweaking of some parameters of the
 
 The parameters for various signals are listed below
 
-| Signal     |Parameter 1                   |Parameter 2                      |  Signal      |
+| Signal     |Parameter 1                   |Parameter 2                      |  Formula      |
 |----------------|-------------------------------|-----------------------------|--------------------|
 |Sine|Frequency            |Amplitude            | x(t) = $A \sin(2\pi f t)$ |
 |Cosine|Frequency|Amplitude| x(t) = $A \cos(2\pi f t)$ |
 |Ramp|-|Amplitude| x(t) = At |
 |Pulse|-|Amplitude| x(t) = $A \mathcal{I}_{[-\frac{2}{3},\frac{2}{3}]}$ |
-|Haar|Scale Parameter|Amplitude| x(t) = $A \mathcal{I}_{[-2,-2+\frac{1}{2^{s-1}}]} - \mathcal{I}_{[-2+\frac{1}{2^{s-1}},-2+\frac{1}{2^{s-2}}]}$ |
+|Haar|Scale Parameter|Amplitude| x(t) = $2^{(s-1)/2} \cdot \psi(2^{(s-1)} t)$, where $\psi(t) = \begin{cases} 1, & 0 \leq t < 0.5 \\ -1, & 0.5 \leq t < 1 \\ 0, & \text{otherwise} \end{cases}$ |
 |Complex Exponential|Frequency|Amplitude| x(t) = $A e^{2\pi f t}$ |
 
 The plot is obtained and it represents the selected signal with the specified parameters.

@@ -1,3 +1,10 @@
+// TODO: make sure that the table from index.html about haar is also present in procedure
+// TODO: in the Real Sinusoids multiplication -N is never defined on instruction and if we do -T/2 to T/2 then also we should display
+// TODO: in Complex Sinusoids as well keep T and not N.. and also the product formula fix
+// TODO: in Orthogonality of Haar wavelet  and Orthogonality Test as well just keep -inf to inf instead of -N to N
+// TODO:
+// Simulations tab3 and tab4 - formula at the bottom should use T instead of N (also in the instructions).
+// Tab5 - for Haar the range of integration in formula should be from -infinity to infinity.
 function openPart(evt, name) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -9,7 +16,7 @@ function openPart(evt, name) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById(name).style.display = "block";
-  evt.currentTarget.className += " active";
+  evt.currentTarget.className += " active"
   if (!name.localeCompare("Signal")) {
     sig();
     updateParameterLabels(); // Update labels when switching to Signal tab
@@ -273,7 +280,7 @@ window.addEventListener("DOMContentLoaded", function () {
   // Signal tab
   var sigNames = document.getElementById("sig-names");
   if (sigNames) {
-    sigNames.addEventListener("change", function() {
+    sigNames.addEventListener("change", function () {
       updateParameterLabels();
       sig();  // Re-plot when signal changes
     });
@@ -283,13 +290,13 @@ window.addEventListener("DOMContentLoaded", function () {
   var sigNames1 = document.getElementById("sig-names1");
   var sigNames2 = document.getElementById("sig-names2");
   if (sigNames1) {
-    sigNames1.addEventListener("change", function() {
+    sigNames1.addEventListener("change", function () {
       updateProductParameterLabels();
       prod();  // Re-plot when first signal changes
     });
   }
   if (sigNames2) {
-    sigNames2.addEventListener("change", function() {
+    sigNames2.addEventListener("change", function () {
       updateProductParameterLabels();
       prod();  // Re-plot when second signal changes
     });
@@ -300,13 +307,13 @@ window.addEventListener("DOMContentLoaded", function () {
   var sigNames7 = document.getElementById("sig-names7");
   var sigNames8 = document.getElementById("sig-names8");
   if (sigNames7) {
-    sigNames7.addEventListener("change", function() {
+    sigNames7.addEventListener("change", function () {
       updateOrthParameterLabels();
       orth();  // Re-plot when first signal changes
     });
   }
   if (sigNames8) {
-    sigNames8.addEventListener("change", function() {
+    sigNames8.addEventListener("change", function () {
       updateOrthParameterLabels();
       orth();  // Re-plot when second signal changes
     });
@@ -317,12 +324,12 @@ window.addEventListener("DOMContentLoaded", function () {
   var sigNames5 = document.getElementById("sig-names5");
   var sigNames6 = document.getElementById("sig-names6");
   if (sigNames5) {
-    sigNames5.addEventListener("change", function() {
+    sigNames5.addEventListener("change", function () {
       har();  // Re-plot when first wavelet scale changes
     });
   }
   if (sigNames6) {
-    sigNames6.addEventListener("change", function() {
+    sigNames6.addEventListener("change", function () {
       har();  // Re-plot when second wavelet scale changes
     });
   }
@@ -331,12 +338,12 @@ window.addEventListener("DOMContentLoaded", function () {
   var freInput = document.getElementById("fre");
   var ampInput = document.getElementById("amp");
   if (freInput) {
-    freInput.addEventListener("change", function() {
+    freInput.addEventListener("change", function () {
       sig();
     });
   }
   if (ampInput) {
-    ampInput.addEventListener("change", function() {
+    ampInput.addEventListener("change", function () {
       sig();
     });
   }
@@ -347,22 +354,22 @@ window.addEventListener("DOMContentLoaded", function () {
   var fre2Input = document.getElementById("fre2");
   var amp2Input = document.getElementById("amp2");
   if (fre1Input) {
-    fre1Input.addEventListener("change", function() {
+    fre1Input.addEventListener("change", function () {
       prod();
     });
   }
   if (amp1Input) {
-    amp1Input.addEventListener("change", function() {
+    amp1Input.addEventListener("change", function () {
       prod();
     });
   }
   if (fre2Input) {
-    fre2Input.addEventListener("change", function() {
+    fre2Input.addEventListener("change", function () {
       prod();
     });
   }
   if (amp2Input) {
-    amp2Input.addEventListener("change", function() {
+    amp2Input.addEventListener("change", function () {
       prod();
     });
   }
@@ -373,22 +380,22 @@ window.addEventListener("DOMContentLoaded", function () {
   var fre4Input = document.getElementById("fre4");
   var amp4Input = document.getElementById("amp4");
   if (fre3Input) {
-    fre3Input.addEventListener("change", function() {
+    fre3Input.addEventListener("change", function () {
       orth();
     });
   }
   if (amp3Input) {
-    amp3Input.addEventListener("change", function() {
+    amp3Input.addEventListener("change", function () {
       orth();
     });
   }
   if (fre4Input) {
-    fre4Input.addEventListener("change", function() {
+    fre4Input.addEventListener("change", function () {
       orth();
     });
   }
   if (amp4Input) {
-    amp4Input.addEventListener("change", function() {
+    amp4Input.addEventListener("change", function () {
       orth();
     });
   }
@@ -441,7 +448,7 @@ function sig() {
     // For k=0, centered at origin on [-2, 2]
     // scale parameter s = 2^n, so n = log2(s)
     var n = Math.log2(freq);  // freq is the scale parameter (1, 2, 4, 8)
-    var amplitude = am * Math.pow(2, n/2);  // 2^(n/2) scaling
+    var amplitude = am * Math.pow(2, n / 2);  // 2^(n/2) scaling
     var halfWidth = 1 / Math.pow(2, n + 1);  // Support is [-1/2^(n+1), 1/2^(n+1))
 
     var xValues = makeArr(-2, 2, 1000);
@@ -451,7 +458,7 @@ function sig() {
       var x = xValues[i];
       if (x >= 0 && x < halfWidth) {
         yValues.push(amplitude);  // Positive half [0, halfWidth)
-      } else if (x >= halfWidth && x <= 2*halfWidth) {
+      } else if (x >= halfWidth && x <= 2 * halfWidth) {
         yValues.push(-amplitude);  // Negative half [-halfWidth, 0)
       } else {
         yValues.push(0);  // Outside support
@@ -633,7 +640,7 @@ function prod() {
     // For k=0, centered at origin on [-2, 2]
     // scale parameter s = 2^n, so n = log2(s)
     var n = Math.log2(freq);  // freq is the scale parameter (1, 2, 4, 8)
-    var amplitude = am * Math.pow(2, n/2);  // 2^(n/2) scaling
+    var amplitude = am * Math.pow(2, n / 2);  // 2^(n/2) scaling
     var halfWidth = 1 / Math.pow(2, n + 1);  // Support is [-1/2^(n+1), 1/2^(n+1))
 
     var xValues = makeArr(-2, 2, 1000);
@@ -642,7 +649,7 @@ function prod() {
       var x = xValues[i];
       if (x >= 0 && x < halfWidth) {
         yValues.push(amplitude);  // Positive half [0, halfWidth)
-      } else if (x >= halfWidth && x <= 2*halfWidth) {
+      } else if (x >= halfWidth && x <= 2 * halfWidth) {
         yValues.push(-amplitude);  // Negative half [-halfWidth, 0)
       } else {
         yValues.push(0);  // Outside support
@@ -709,7 +716,7 @@ function prod() {
     // }
 
     var n = Math.log2(freq1);  // freq is the scale parameter (1, 2, 4, 8)
-    var amplitude = am1 * Math.pow(2, n/2);  // 2^(n/2) scaling
+    var amplitude = am1 * Math.pow(2, n / 2);  // 2^(n/2) scaling
     var halfWidth = 1 / Math.pow(2, n + 1);  // Support is [-1/2^(n+1), 1/2^(n+1))
 
     var xValues1 = makeArr(-2, 2, 1000);
@@ -718,7 +725,7 @@ function prod() {
       var x = xValues1[i];
       if (x >= 0 && x < halfWidth) {
         yValues1.push(amplitude);  // Positive half [0, halfWidth)
-      } else if (x >= halfWidth && x <= 2*halfWidth) {
+      } else if (x >= halfWidth && x <= 2 * halfWidth) {
         yValues1.push(-amplitude);  // Negative half [-halfWidth, 0)
       } else {
         yValues1.push(0);  // Outside support
@@ -1226,7 +1233,7 @@ function har() {
   var xValues = makeArr(-2, 2, 1000);
   var yValues1 = [];
   var halfWidth1 = 1 / Math.pow(2, n1 + 1);
-  var amplitude1 = am1 * Math.pow(2, n1/2);
+  var amplitude1 = am1 * Math.pow(2, n1 / 2);
 
   for (var i = 0; i < 1000; i++) {
     var x = xValues[i];
@@ -1241,13 +1248,13 @@ function har() {
 
   var yValues2 = [];
   var halfWidth2 = 1 / Math.pow(2, n2 + 1);
-  var amplitude2 = am1 * Math.pow(2, n2/2);
+  var amplitude2 = am1 * Math.pow(2, n2 / 2);
 
   for (var i = 0; i < 1000; i++) {
     var x = xValues[i];
     if (x >= 0 && x < halfWidth2) {
       yValues2.push(amplitude2);  // Positive half [0, halfWidth)
-    } else if (x >= halfWidth2 && x <= 2*halfWidth2) {
+    } else if (x >= halfWidth2 && x <= 2 * halfWidth2) {
       yValues2.push(-amplitude2);  // Negative half [-halfWidth, 0)
     } else {
       yValues2.push(0);
@@ -1379,7 +1386,7 @@ function orth() {
     // Haar wavelet: psi_{n,0}(t) = 2^(n/2) * psi(2^n * t)
     // scale parameter s = 2^n, so n = log2(s)
     var n = Math.log2(freq);
-    var amplitude = am * Math.pow(2, n/2);
+    var amplitude = am * Math.pow(2, n / 2);
     var halfWidth = 1 / Math.pow(2, n + 1);
 
     var yValues = [];
@@ -1387,7 +1394,7 @@ function orth() {
       var x = xValues[i];
       if (x >= 0 && x < halfWidth) {
         yValues.push(amplitude);  // Positive half [0, halfWidth)
-      } else if (x >= halfWidth && x <= 2*halfWidth) {
+      } else if (x >= halfWidth && x <= 2 * halfWidth) {
         yValues.push(-amplitude);  // Negative half [-halfWidth, 0)
       } else {
         yValues.push(0);
@@ -1438,7 +1445,7 @@ function orth() {
     // Haar wavelet: psi_{n,0}(t) = 2^(n/2) * psi(2^n * t)
     // scale parameter s = 2^n, so n = log2(s)
     var n1 = Math.log2(freq1);
-    var amplitude1 = am1 * Math.pow(2, n1/2);
+    var amplitude1 = am1 * Math.pow(2, n1 / 2);
     var halfWidth1 = 1 / Math.pow(2, n1 + 1);
 
     var yValues1 = [];
@@ -1446,7 +1453,7 @@ function orth() {
       var x = xValues1[i];
       if (x >= 0 && x < halfWidth1) {
         yValues1.push(amplitude1);  // Positive half [0, halfWidth)
-      } else if (x >= halfWidth1 && x <= 2*halfWidth1) {
+      } else if (x >= halfWidth1 && x <= 2 * halfWidth1) {
         yValues1.push(-amplitude1);  // Negative half [-halfWidth, 0)
       } else {
         yValues1.push(0);
@@ -1495,7 +1502,7 @@ function orth() {
   // If either signal is sine (value 1) or cosine (value 2), then use "[-N, N]"; otherwise "[-∞, ∞]".
   var isPeriodic = sel === 1 || sel === 2 || sel1 === 1 || sel1 === 2;
   var observationRange = isPeriodic
-    ? "Observation Range: [-N, N]"
+    ? "Observation Range: [-T/2, T/2]"
     : "Observation Range: [-∞, ∞]";
 
   var trace1 = {
@@ -1544,7 +1551,7 @@ function orth() {
   Plotly.relayout("figure5", update);
   // Also update the static observation label in the Orth tab.
   document.getElementById("obsLabel").innerHTML = isPeriodic
-    ? " \\( \\int_{-N}^{N} x_{1}(t) x_{2}(t) dt = \\) "
+    ? " \\( \\int_{-T/2}^{T/2} x_{1}(t) x_{2}(t) dt = \\) "
     : " \\( \\int_{-\\infty}^{\\infty} x_{1}(t) x_{2}(t) dt = \\) ";
 
   // Trigger re-rendering math if using KaTeX.
