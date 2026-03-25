@@ -1,1 +1,1 @@
-## Experiment name
+## Signal representation and orthogonality 
