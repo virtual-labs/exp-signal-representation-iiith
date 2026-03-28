@@ -13,7 +13,7 @@
         "c": "To check if vectors are orthogonal, we calculate their dot product. For $v_1$ and $v_3$: $v_1 \\cdot v_3 = 1(0) + 0(3) + 0(2) = 0$, confirming they are orthogonal. The other pairs have non-zero dot products."
       },
       "correctAnswer": "c",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
     {
       "question": "What is $a_0$ for the periodic signal $x(t)=\\frac{\\sqrt{(1-\\sin (x))}}{2}$ ?",
@@ -27,7 +27,7 @@
         "c": "For a periodic signal, $a_0$ represents the DC component (average value) over one period. Since $x(t)$ is an odd function about $\\pi/2$, its average value over a complete period is 0."
       },
       "correctAnswer": "c",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
     {
       "question": "What is $\\exp (j \\theta)$ equal to, where $j$ is the square root of unity?",
@@ -41,7 +41,7 @@
         "b": "By Euler's formula, $e^{j\\theta} = \\cos(\\theta) + j\\sin(\\theta)$. This is a fundamental relationship in complex analysis and signal processing."
       },
       "correctAnswer": "b",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
     {
       "question": "If the signals $x_1(t)$ and $x_2(t)$ are orthogonal in $[0 , T]$, then the signals",
@@ -55,7 +55,7 @@
         "d": "All statements are true because: 1) Scaling preserves orthogonality, 2) Time reversal preserves inner product, and 3) If $x_1(t)$ and $x_2(t)$ are orthogonal, their product integrated with any constant is also zero."
       },
       "correctAnswer": "d",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     },
     {
       "question": "If vectors $v_1$ and $v_2$ are orthogonal and vectors $v_2$ and $v_3$ are orthogonal, then which of the following statement is true",
@@ -69,7 +69,7 @@
         "b": "Orthogonality is not transitive. Even if $v_1 \\perp v_2$ and $v_2 \\perp v_3$, this doesn't guarantee that $v_1 \\perp v_3$. A simple 3D example can demonstrate this."
       },
       "correctAnswer": "b",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     }
   ]
 }

@@ -13,7 +13,7 @@
         "b": "Two signals are orthogonal if their inner product is zero: $\\int_{T_1}^{T_2} x_1(t)x_2(t)dt = 0$. This is equivalent to their dot product being zero over the interval. Simply having zero product at any point or zero sum is not sufficient for orthogonality."
       },
       "correctAnswer": "b",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
     {
       "question": "The signals $\\sin (t)$ and $\\sin (\\alpha t)$ are orthogonal in the interval $[0, 2\\pi]$ if",
@@ -27,7 +27,7 @@
         "c": "For sinusoidal functions to be orthogonal in $[0,2\\pi]$, we need $\\int_0^{2\\pi} \\sin(t)\\sin(\\alpha t)dt = 0$. This is true for all integer values of $\\alpha$ except when $\\alpha = \\pm 1$, as these cases result in non-zero integrals."
       },
       "correctAnswer": "c",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     },
     {
       "question": "Which of the signals are orthogonal to each other, $x_1(t)=\\psi(t), x_2(t)=\\cos (2 \\pi t), x_3(t)=\\psi(2 t)$ in the period $[0,1]$?",
@@ -41,7 +41,7 @@
         "d": "Both $x_1(t)$ and $x_2(t)$ are orthogonal because $\\int_0^1 \\psi(t)\\cos(2\\pi t)dt = 0$, and $x_1(t)$ and $x_3(t)$ are orthogonal because $\\int_0^1 \\psi(t)\\psi(2t)dt = 0$."
       },
       "correctAnswer": "d",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     },
     {
       "question": "Which pairs of signals are orthogonal among $x_1(t)=\\cos (t), x_2(t)=5 \\sin (5 t), x_3(t)=\\sin (t)$ in the period $[0, 2\\pi]$?",
@@ -55,7 +55,7 @@
         "d": "Both $x_1(t)$ and $x_2(t)$ are orthogonal because $\\int_0^1 \\psi(t)\\cos(2\\pi t)dt = 0$, and $x_1(t)$ and $x_3(t)$ are orthogonal because $\\int_0^1 \\psi(t)\\psi(2t)dt = 0$ due to their different frequency components."
       },
       "correctAnswer": "d",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     },
     {
       "question": "If vectors $v_1$ and $v_2$ are orthogonal and vectors $v_2$ and $v_3$ are orthogonal, then which of the following statement is true",
@@ -69,7 +69,7 @@
         "d": "Since $v_2$ is orthogonal to both $v_1$ and $v_3$, it will be orthogonal to any linear combination of $v_2$ and $v_3$."
       },
       "correctAnswer": "d",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     }
   ]
 }
