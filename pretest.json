@@ -1,0 +1,75 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Let $v_1=\\left[\\begin{array}{lll}1 & 0 & 0\\end{array}\\right]^T, v_2=\\left[\\begin{array}{lll}1 & 2 & 0\\end{array}\\right]^T$ and $v_3=\\left[\\begin{array}{ll}0 & 3 & 2\\end{array}\\right]^T$. Which pairs of vectors are orthogonal to each other?",
+      "answers": {
+        "a": "$v_1$ and $v_2$",
+        "b": "$v_2$ and $v_3$",
+        "c": "$v_1$ and $v_3$",
+        "d": "all above"
+      },
+      "explanations": {
+        "c": "To check if vectors are orthogonal, we calculate their dot product. For $v_1$ and $v_3$: $v_1 \\cdot v_3 = 1(0) + 0(3) + 0(2) = 0$, confirming they are orthogonal. The other pairs have non-zero dot products."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is $a_0$ for the periodic signal $x(t)=\\frac{\\sqrt{(1-\\sin (x))}}{2}$ ?",
+      "answers": {
+        "a": "$\\frac{1}{2}$",
+        "b": "$\\pi$",
+        "c": "0",
+        "d": "$\\frac{3}{2} \\pi$"
+      },
+      "explanations": {
+        "c": "For a periodic signal, $a_0$ represents the DC component (average value) over one period. Since $x(t)$ is an odd function about $\\pi/2$, its average value over a complete period is 0."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is $\\exp (j \\theta)$ equal to, where $j$ is the square root of unity?",
+      "answers": {
+        "a": "$\\sin (\\theta)+\\cos (\\theta)$",
+        "b": "$\\cos (\\theta)+j \\sin (\\theta)$",
+        "c": "$\\sin (\\theta)+j \\cos (\\theta)$",
+        "d": "$j \\cos (\\theta)+j \\sin (\\theta)$"
+      },
+      "explanations": {
+        "b": "By Euler's formula, $e^{j\\theta} = \\cos(\\theta) + j\\sin(\\theta)$. This is a fundamental relationship in complex analysis and signal processing."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If the signals $x_1(t)$ and $x_2(t)$ are orthogonal in $[0 , T]$, then the signals",
+      "answers": {
+        "a": "$-x_1(t)$ and $-x_2(t)$ are orthogonal in $[0 , T]$",
+        "b": "$x_1(-t)$ and $x_2(-t)$ are orthogonal in $[-T ,  0]$",
+        "c": "$y(t)=x_1(t) x_2(t)$ and $z(t)=1$ are orthogonal in $[0 , T]$",
+        "d": "all above"
+      },
+      "explanations": {
+        "d": "All statements are true because: 1) Scaling preserves orthogonality, 2) Time reversal preserves inner product, and 3) If $x_1(t)$ and $x_2(t)$ are orthogonal, their product integrated with any constant is also zero."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "If vectors $v_1$ and $v_2$ are orthogonal and vectors $v_2$ and $v_3$ are orthogonal, then which of the following statement is true",
+      "answers": {
+        "a": "$v_1$ and $v_3$ are always orthogonal",
+        "b": "$v_1$ and $v_3$ may not be orthogonal",
+        "c": "$v_2$ may not be orthogonal to ( $v_1+v_3$ )",
+        "d": "$v_1$ is always orthogonal to $\\left(v_2+v_3\\right)$"
+      },
+      "explanations": {
+        "b": "Orthogonality is not transitive. Even if $v_1 \\perp v_2$ and $v_2 \\perp v_3$, this doesn't guarantee that $v_1 \\perp v_3$. A simple 3D example can demonstrate this."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    }
+  ]
+}
